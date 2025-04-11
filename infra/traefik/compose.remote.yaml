@@ -1,0 +1,20 @@
+# --------------------------------------------------------------------------------------
+# overrides
+# --------------------------------------------------------------------------------------
+services:
+  traefik:
+    image: traefik:v3.3
+    command:
+      - "--api.insecure=false"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.cfresolver.acme.dnschallenge=true"
+      - "--certificatesresolvers.cfresolver.acme.dnschallenge.provider=cloudflare"
+      - "--certificatesresolvers.cfresolver.acme.email=${ACME_EMAIL}"
+      - "--certificatesresolvers.cfresolver.acme.storage=/letsencrypt/acme.json"
+    environment:
+      - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
