@@ -1,0 +1,126 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+vars:
+  # required
+  APP: "{{.APP}}"
+  COMPOSE_FILE: "{{.INFRA_DIR}}/{{.APP}}/compose.yaml"
+
+  # dynamic
+  LOCAL_OVERRIDE:
+    sh: test -f {{.INFRA_DIR}}/{{.APP}}/compose.local.yaml && echo {{.INFRA_DIR}}/{{.APP}}/compose.local.yaml || echo ""
+  REMOTE_OVERRIDE:
+    sh: test -f {{.INFRA_DIR}}/{{.APP}}/compose.remote.yaml && echo {{.INFRA_DIR}}/{{.APP}}/compose.remote.yaml || echo ""
+  LOCAL_ENV:
+    sh: test -f {{.INFRA_DIR}}/{{.APP}}/env.local.sops.yaml && echo {{.INFRA_DIR}}/{{.APP}}/env.local.sops.yaml || echo ""
+  REMOTE_ENV:
+    sh: test -f {{.INFRA_DIR}}/{{.APP}}/env.remote.sops.yaml && echo {{.INFRA_DIR}}/{{.APP}}/env.remote.sops.yaml || echo ""
+
+tasks:
+  # ------------------------------------------------------------
+  # internal tasks
+  # ------------------------------------------------------------
+  docker-compose:
+    internal: true
+    requires:
+      vars:
+        - COMPOSE_FILE
+        - CMD
+    cmds:
+      - >
+        {{if .ENV_FILE}}
+        sops exec-env {{.ENV_FILE}} "
+        {{end}}
+        docker
+        {{if .DOCKER_CONTEXT}}
+        --context {{.DOCKER_CONTEXT}}
+        {{end}}
+        compose --file {{.COMPOSE_FILE}} 
+        {{if .OVERRIDE}}
+        --file {{.OVERRIDE}}
+        {{end}}
+        {{.CMD}}
+        {{if .ENV_FILE}}"{{end}}
+    preconditions:
+      - sh: test -n "{{.APP}}"
+        msg: "APP variable not specified"
+      - test -f {{.SOPS_CONFIG_FILE}}
+      - test -f {{.COMPOSE_FILE}}
+      - which docker
+
+  # ------------------------------------------------------------
+  # local environment tasks
+  # ------------------------------------------------------------
+  local:up:
+    desc: Bootstrap local infrastructure
+    cmds:
+      - task: docker-compose
+        vars:
+          ENV_FILE: "{{.LOCAL_ENV}}"
+          OVERRIDE: "{{.LOCAL_OVERRIDE}}"
+          CMD: "up -d"
+
+  local:down:
+    desc: Teardown local infrastructure
+    prompt: This will destroy LOCAL {{.APP}} infrastructure... continue?
+    cmds:
+      - task: docker-compose
+        vars:
+          ENV_FILE: "{{.LOCAL_ENV}}"
+          OVERRIDE: "{{.LOCAL_OVERRIDE}}"
+          CMD: "down -v"
+
+  local:logs:
+    desc: View logs for local infrastructure
+    cmds:
+      - task: docker-compose
+        vars:
+          ENV_FILE: "{{.LOCAL_ENV}}"
+          OVERRIDE: "{{.LOCAL_OVERRIDE}}"
+          CMD: "logs -f {{.CLI_ARGS}}"
+
+  # ------------------------------------------------------------
+  # remote environment tasks
+  # ------------------------------------------------------------
+  remote:up:
+    desc: Bootstrap remote infrastructure with Docker compose
+    cmds:
+      - task: docker-compose
+        vars:
+          ENV_FILE: "{{.REMOTE_ENV}}"
+          OVERRIDE: "{{.REMOTE_OVERRIDE}}"
+          CMD: "up -d"
+          DOCKER_CONTEXT: "{{.REMOTE_HOST}}"
+
+  remote:down:
+    desc: Teardown remote infrastructure
+    prompt: This will destroy REMOTE {{.APP}} infrastructure... continue?
+    cmds:
+      - task: docker-compose
+        vars:
+          ENV_FILE: "{{.REMOTE_ENV}}"
+          OVERRIDE: "{{.REMOTE_OVERRIDE}}"
+          CMD: "down"
+          DOCKER_CONTEXT: "{{.REMOTE_HOST}}"
+
+  remote:status:
+    desc: View the status of remote services
+    cmds:
+      - task: docker-compose
+        vars:
+          ENV_FILE: "{{.REMOTE_ENV}}"
+          OVERRIDE: "{{.REMOTE_OVERRIDE}}"
+          CMD: "ps"
+          DOCKER_CONTEXT: "{{.REMOTE_HOST}}"
+
+  remote:logs:
+    desc: View logs for a service in the remote deployment
+    requires:
+      vars: [SERVICE]
+    cmds:
+      - task: docker-compose
+        vars:
+          ENV_FILE: "{{.REMOTE_ENV}}"
+          OVERRIDE: "{{.REMOTE_OVERRIDE}}"
+          CMD: "logs {{.SERVICE}}"
+          DOCKER_CONTEXT: "{{.REMOTE_HOST}}"

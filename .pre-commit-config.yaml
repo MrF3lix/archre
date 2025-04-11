@@ -1,0 +1,30 @@
+repos:
+  # ruff linting and formatting
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        name: lint with ruff
+        types_or: [python, pyi]
+      - id: ruff
+        name: sort imports with ruff
+        types_or: [python, pyi]
+        args: [--select, I, --fix]
+      - id: ruff-format
+        name: format with ruff
+        types_or: [python, pyi]
+
+  # yaml formatting
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        name: format yaml with prettier
+        types: [yaml]
+
+  # sops encryption
+  - repo: https://github.com/voldy/validate-sops
+    rev: "v0.1.1"
+    hooks:
+      - id: validate-sops
+        files: .*\.+.sops\.(yaml|yml|json|env)$

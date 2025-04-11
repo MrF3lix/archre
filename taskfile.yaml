@@ -1,0 +1,24 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+set: [pipefail]
+shopt: [globstar]
+
+vars:
+  # local
+  INFRA_DIR: "{{.ROOT_DIR}}/infra"
+  DOCS_DIR: "{{.ROOT_DIR}}/docs"
+
+  # remote
+  REMOTE_HOST: "zhaw-vm"
+
+env:
+  SOPS_AGE_KEY_FILE: "{{.ROOT_DIR}}/age.key"
+
+includes:
+  devel: .taskfiles/devel
+  infra: .taskfiles/infra
+
+tasks:
+  default: task --list

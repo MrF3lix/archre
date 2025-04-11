@@ -1,0 +1,105 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+env:
+  SOPS_AGE_KEY_FILE: "{{.SOPS_AGE_KEY_FILE}}"
+
+tasks:
+  # ------------------------------------------------------------
+  # environment and tools
+  # ------------------------------------------------------------
+  env:
+    desc: Set up development environment
+    cmds:
+      - task: deps
+      - task: direnv
+      - task: precommit
+      - task: docker-context
+
+  deps:
+    internal: true
+    cmd: brew bundle --file {{.ROOT_DIR}}/.taskfiles/devel/Brewfile
+    sources:
+      - "{{.ROOT_DIR}}/.taskfiles/devel/Brewfile"
+    generates:
+      - "{{.ROOT_DIR}}/.taskfiles/devel/Brewfile.lock.json"
+    preconditions:
+      - test -f {{.ROOT_DIR}}/.taskfiles/devel/Brewfile
+      - which brew
+
+  direnv:
+    internal: true
+    cmd: direnv allow .
+    status:
+      - '[[ $(direnv status --json | jq ".state.foundRC.allowed") == 0 ]]'
+      - '[[ $(direnv status --json | jq ".state.loadedRC.allowed") == 0 ]]'
+    preconditions:
+      - which direnv
+
+  precommit:
+    internal: true
+    cmd: uvx pre-commit install
+    generates:
+      - "{{.ROOT_DIR}}/.git/hooks/pre-commit"
+    preconditions:
+      - which uvx
+
+  # ------------------------------------------------------------
+  # sops
+  # ------------------------------------------------------------
+  sops:
+    desc: Set up sops with age
+    cmds:
+      - task: age
+      - task: sops-conf
+      - task: sops-differ
+
+  sops-differ:
+    internal: true
+    status:
+      - git config --local --get diff.sopsdiffer.textconv | grep -q "sops decrypt"
+    cmds:
+      - git config --local diff.sopsdiffer.textconv "sops decrypt"
+    preconditions:
+      - which git
+
+  sops-conf:
+    internal: true
+    vars:
+      PUB:
+        sh: age-keygen -y {{.SOPS_AGE_KEY_FILE}}
+    status:
+      - >-
+        test $(yq '[.creation_rules[].key_groups[].age |
+        contains(["{{.PUB}}"])] | 
+        all' {{.ROOT_DIR}}/.sops.yaml) = "true"
+    cmds:
+      - >-
+        yq -i '(.creation_rules[].key_groups[].age) += ["{{.PUB}}"]'
+        {{.ROOT_DIR}}/.sops.yaml
+    preconditions:
+      - which age-keygen
+      - test -f {{.ROOT_DIR}}/.sops.yaml
+
+  age:
+    internal: true
+    cmds:
+      - age-keygen -o {{.SOPS_AGE_KEY_FILE}}
+    status:
+      - test -f {{.SOPS_AGE_KEY_FILE}}
+    preconditions:
+      - which age-keygen
+
+  # ------------------------------------------------------------
+  # docker
+  # ------------------------------------------------------------
+  docker-context:
+    internal: true
+    cmds:
+      - docker context create {{.REMOTE_HOST}} --docker "host=ssh://{{.REMOTE_HOST}}"
+    status:
+      - docker context ls --format 'json' | jq -e '. | select(.Name=="{{.REMOTE_HOST}}")' > /dev/null 2>&1
+    preconditions:
+      - which docker
+      - which jq
