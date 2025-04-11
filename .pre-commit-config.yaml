@@ -22,9 +22,8 @@ repos:
         name: format yaml with prettier
         types: [yaml]
 
-  # sops encryption
-  - repo: https://github.com/voldy/validate-sops
-    rev: "v0.1.1"
+  # secrets
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
     hooks:
-      - id: validate-sops
-        files: .*\.+.sops\.(yaml|yml|json|env)$
+      - id: gitleaks
