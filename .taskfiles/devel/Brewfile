@@ -1,3 +1,5 @@
+tap "terrastruct/tap"
+
 brew "age"
 brew "sops"
 brew "direnv"
@@ -6,4 +8,4 @@ brew "jq"
 brew "yq"
 brew "node"
 brew "d2"
-brew "terrastruct/tap/tala"
+brew "tala"
