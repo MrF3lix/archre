@@ -4,6 +4,7 @@ creation_rules:
     key_groups:
       - age:
           - age13879m637a5fpy9sj8adlrd8840cvdwjpglc92j9pxdww6lw4t5kq0fs8dd
+          - age1t5sd7rzgf5tk5ffeh6q6zt4n9cjsn9s2d0kex00ewg3qkee87a3qhj53lc
 stores:
   yaml:
     indent: 2
