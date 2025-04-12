@@ -1,0 +1,8 @@
+# --------------------------------------------------------------------------------------
+# overrides
+# --------------------------------------------------------------------------------------
+services:
+  minio:
+    labels:
+      - "traefik.http.routers.nessie.tls.certresolver=cfresolver"
+      - "traefik.http.routers.nessie.rule=Host(`minio.flooq.io`)"
