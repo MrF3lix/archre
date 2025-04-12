@@ -3,21 +3,23 @@
 # ------------------------------------------------------------------------------------
 services:
   webapp:
-    image: flooq/webapp
     build:
       context: ../../src/webapp
       dockerfile: Dockerfile
     restart: unless-stopped
     expose:
       - 3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.webapp.tls=true"
+      - "traefik.http.routers.webapp.entrypoints=websecure"
+      - "traefik.http.routers.webapp.rule=Host(`webapp.localtest.me`)"
+      - "traefik.http.services.webapp.loadbalancer.server.port=3000"
     networks:
       - traefik-public
     environment:
-      - NEXT_PUBLIC_POCKETBASE_URL=${NEXT_PUBLIC_POCKETBASE_URL}
-
-# ------------------------------------------------------------------------------------
-# volumes
-# ------------------------------------------------------------------------------------
+      - NEXT_PUBLIC_POCKETBASE_URL=http://webapp.localtest.me:3000
 
 # ------------------------------------------------------------------------------------
 # networks

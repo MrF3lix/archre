@@ -17,10 +17,10 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik-public"
-      - "traefik.http.routers.nessie.tls=true"
-      - "traefik.http.routers.nessie.entrypoints=websecure"
-      - "traefik.http.routers.nessie.rule=Host(`minio.localtest.me`)"
-      - "traefik.http.services.nessie.loadbalancer.server.port=9001"
+      - "traefik.http.routers.minio.tls=true"
+      - "traefik.http.routers.minio.entrypoints=websecure"
+      - "traefik.http.routers.minio.rule=Host(`minio.localtest.me`)"
+      - "traefik.http.services.minio.loadbalancer.server.port=9001"
     networks:
       - traefik-public
       - default
@@ -50,7 +50,7 @@ services:
 # ------------------------------------------------------------------------------------
 networks:
   traefik-public:
-    external: true
+    external: false
 
 # ------------------------------------------------------------------------------------
 # volumes

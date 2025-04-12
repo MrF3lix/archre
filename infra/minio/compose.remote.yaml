@@ -4,5 +4,12 @@
 services:
   minio:
     labels:
-      - "traefik.http.routers.nessie.tls.certresolver=cfresolver"
-      - "traefik.http.routers.nessie.rule=Host(`minio.flooq.io`)"
+      - "traefik.http.routers.minio.tls.certresolver=cfresolver"
+      - "traefik.http.routers.minio.rule=Host(`minio.flooq.io`)"
+
+# ------------------------------------------------------------------------------------
+# networks
+# ------------------------------------------------------------------------------------
+networks:
+  traefik-public:
+    external: true

@@ -1,0 +1,38 @@
+# ------------------------------------------------------------------------------------
+# services
+# ------------------------------------------------------------------------------------
+services:
+  backend:
+    build:
+      context: ../../src/pocketbase/
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - 8080
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.pocketbase.tls=true"
+      - "traefik.http.routers.pocketbase.entrypoints=websecure"
+      - "traefik.http.routers.pocketbase.rule=Host(`api.localtest.me`)"
+      - "traefik.http.services.pocketbase.loadbalancer.server.port=8080"
+    networks:
+      - traefik-public
+    volumes:
+      - pocketbase_data:/pb/pb_data
+    environment:
+      - PB_ROOT_MAIL=${PB_ROOT_MAIL}
+      - PB_ROOT_PASSWORD=${PB_ROOT_PASSWORD}
+
+# ------------------------------------------------------------------------------------
+# networks
+# ------------------------------------------------------------------------------------
+networks:
+  traefik-public:
+    external: false
+
+# ------------------------------------------------------------------------------------
+# volumes
+# ------------------------------------------------------------------------------------
+volumes:
+  pocketbase_data:
