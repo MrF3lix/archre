@@ -19,12 +19,11 @@ services:
     networks:
       - traefik-public
     environment:
-      - NEXT_PUBLIC_POCKETBASE_URL=http://webapp.localtest.me:3000
+      - NEXT_PUBLIC_POCKETBASE_URL=http://localhost:8080
 
 # ------------------------------------------------------------------------------------
 # networks
 # ------------------------------------------------------------------------------------
 networks:
   traefik-public:
-    name: traefik-public
     external: false

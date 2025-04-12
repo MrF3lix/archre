@@ -7,7 +7,7 @@ services:
       - "traefik.http.routers.webapp.tls.certresolver=cfresolver"
       - "traefik.http.routers.webapp.rule=Host(`flooq.io`)"
     environment:
-      - NEXT_PUBLIC_POCKETBASE_URL=https://flooq.io
+      - NEXT_PUBLIC_POCKETBASE_URL=https://api.flooq.io
 
 # ------------------------------------------------------------------------------------
 # networks
