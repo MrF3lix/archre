@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { logout } from "../auth/logout";
 import Image from "next/image";
-import useCookie from "@/lib/use-cookies";
-import { getAvatarUrl } from "@/lib/pocketbase";
+import useCookie from "@/helper/use-cookies";
+import { getAvatarUrl } from "@/helper/pocketbase";
 import { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
