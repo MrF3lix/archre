@@ -9,6 +9,7 @@ vars:
   # local
   INFRA_DIR: "{{.ROOT_DIR}}/infra"
   DOCS_DIR: "{{.ROOT_DIR}}/docs"
+  SCRIPTS_DIR: "{{.ROOT_DIR}}/scripts"
 
   # remote
   REMOTE_HOST: "vm-swisshacks"
@@ -19,6 +20,7 @@ env:
 includes:
   devel: .taskfiles/devel
   infra: .taskfiles/infra
+  sops: .taskfiles/sops
 
 tasks:
   default: task --list

@@ -1,0 +1,109 @@
+name: Deploy Changed Services
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "infra/**"
+      - "src/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "infra/**"
+      - "src/**"
+  workflow_dispatch:
+    inputs:
+      specific_services:
+        description: "Comma-separated list of specific services to deploy (leave empty to auto-detect)"
+        required: false
+        default: ""
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      services: ${{ steps.detect-changes.outputs.services }}
+      has_changes: ${{ steps.detect-changes.outputs.has_changes }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed services
+        id: detect-changes
+        run: |
+          # check if specific services were provided
+          if [ "${{ github.event.inputs.specific_services }}" != "" ]; then
+            SERVICES="${{ github.event.inputs.specific_services }}"
+            echo "Using manually specified services: $SERVICES"
+            echo "services=$SERVICES" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # determine base commit for comparison
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            BASE_SHA=${{ github.event.pull_request.base.sha }}
+          else
+            # for push events, get previous commit
+            BASE_SHA=$(git rev-parse HEAD^)
+          fi
+
+          # get list of changed files
+          CHANGED_FILES=$(git diff --name-only $BASE_SHA HEAD)
+
+          # extract service names from changed paths
+          SERVICES=$(echo "$CHANGED_FILES" | grep -E '^(src|infra)/' | sed -E 's|^(src|infra)/([^/]+).*|\2|' | sort -u)
+
+          if [ -z "$SERVICES" ]; then
+            echo "No services have changed."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Services with changes: $SERVICES"
+            echo "services=$SERVICES" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+  deploy:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Task
+        uses: arduino/setup-task@v1
+        with:
+          version: "3.x"
+
+      - name: Sops Binary Installer
+        uses: mdgreenwald/mozilla-sops-action@v1.6.0
+        with:
+          version: "3.10.1"
+
+      - name: Install AGE
+        uses: alessiodionisi/setup-age-action@v1.3.0
+        with:
+          version: "v1.2.1"
+
+      - name: Set up docker context
+        uses: amirmarmul/docker-context-ssh-action@v1
+        with:
+          ssh-host: ${{ secrets.VM_HOST }}
+          ssh-username: ${{ secrets.VM_USER }}
+          ssh-private-key: ${{ secrets.VM_SSH_KEY }}
+          context-use: true
+
+      - name: Deploy services
+        env:
+          SOPS_AGE_KEY: ${{ secrets.AGE_KEY }}
+        run: |
+          SERVICES="${{ needs.detect-changes.outputs.services }}"
+          echo "Deploying services: $SERVICES"
+
+          for SERVICE in $SERVICES; do
+            echo "Deploying $SERVICE..."
+            task infra:remote:up APP=$SERVICE REMOTE_HOST=""
+          done

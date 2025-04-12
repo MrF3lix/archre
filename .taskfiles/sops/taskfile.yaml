@@ -1,0 +1,18 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+tasks:
+  encrypt:
+    desc: Encrypt all *.sops.yaml files
+    cmd: bash {{.SCRIPTS_DIR}}/sops-encrypt-all.sh {{.ROOT_DIR}}
+    preconditions:
+      - test -f {{.SCRIPTS_DIR}}/sops-encrypt-all.sh
+      - test -f {{.SOPS_AGE_KEY_FILE}}
+
+  decrypt:
+    desc: Dencrypt all *.sops.yaml files
+    cmd: bash {{.SCRIPTS_DIR}}/sops-decrypt-all.sh {{.ROOT_DIR}}
+    preconditions:
+      - test -f {{.SCRIPTS_DIR}}/sops-decrypt-all.sh
+      - test -f {{.SOPS_AGE_KEY_FILE}}
