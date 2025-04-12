@@ -90,9 +90,8 @@ jobs:
 
       - name: Configure AGE key
         run: |
-          mkdir -p ~/.config/sops/age
-          printf '%s\n' "${{ secrets.AGE_KEY }}" > ~/.config/sops/age/keys.txt
-          chmod 600 ~/.config/sops/age/keys.txt
+          printf '%s\n' "${{ secrets.AGE_KEY }}" > age.key
+          chmod 600 age.key
 
       - name: Set up docker context
         uses: amirmarmul/docker-context-ssh-action@v1
@@ -104,7 +103,7 @@ jobs:
 
       - name: Deploy services
         env:
-          SOPS_AGE_KEY_FILE: "~/.config/sops/age/keys.txt"
+          SOPS_AGE_KEY_FILE: "age.key"
         run: |
           SERVICES="${{ needs.detect-changes.outputs.services }}"
           echo "Deploying services: $SERVICES"
