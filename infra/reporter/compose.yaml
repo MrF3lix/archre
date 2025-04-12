@@ -1,0 +1,26 @@
+# ------------------------------------------------------------------------------------
+# services
+# ------------------------------------------------------------------------------------
+services:
+  reporter:
+    build:
+      context: ../../src/reporter/
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - 8000
+    networks:
+      - traefik-public
+    environment:
+      S3_BUCKET: ${S3_BUCKET}
+      S3_ENDPOINT_URL: ${S3_ENDPOINT_URL}
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY}
+      S3_SECRET_KEY: ${S3_SECRET_KEY}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+
+# ------------------------------------------------------------------------------------
+# networks
+# ------------------------------------------------------------------------------------
+networks:
+  traefik-public:
+    external: false
