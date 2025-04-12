@@ -11,7 +11,7 @@ vars:
   DOCS_DIR: "{{.ROOT_DIR}}/docs"
 
   # remote
-  REMOTE_HOST: "zhaw-vm"
+  REMOTE_HOST: "vm-swisshacks"
 
 env:
   SOPS_AGE_KEY_FILE: "{{.ROOT_DIR}}/age.key"

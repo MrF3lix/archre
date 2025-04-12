@@ -6,6 +6,7 @@ creation_rules:
           - age13879m637a5fpy9sj8adlrd8840cvdwjpglc92j9pxdww6lw4t5kq0fs8dd
           - age1t5sd7rzgf5tk5ffeh6q6zt4n9cjsn9s2d0kex00ewg3qkee87a3qhj53lc
           - age1ns5ma7fnd8xh7wjnmqncekp2t8t882zqqrxs75pznrj5p6un9frqd8zur5
+          - age1a34f8kdfu3fxx4x73g5kk83lt4z7tsqyaw8afrgq9lrp7wgnff8qt7nxq0
 stores:
   yaml:
     indent: 2
