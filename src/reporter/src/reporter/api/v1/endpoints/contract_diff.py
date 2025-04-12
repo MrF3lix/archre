@@ -16,7 +16,7 @@ router = APIRouter(tags=["contract_diff"])
 # --------------------------------------------------------------------------------------
 # routes
 # --------------------------------------------------------------------------------------
-@router.put("/contractdiff", response_model=DiffResponse)
+@router.post("/contractdiff", response_model=DiffResponse)
 async def analyze_contract_diff(diff_request: DiffRequest):
     with tempfile.TemporaryDirectory() as temp_dir:
         try:
