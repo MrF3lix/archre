@@ -12,6 +12,8 @@ services:
       - 3000
     networks:
       - traefik-public
+    environment:
+      - NEXT_PUBLIC_POCKETBASE_URL=${NEXT_PUBLIC_POCKETBASE_URL}
 
 # ------------------------------------------------------------------------------------
 # volumes

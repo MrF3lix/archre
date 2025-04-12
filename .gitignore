@@ -139,3 +139,7 @@ dmypy.json
 
 # taskfile checksums
 .task/
+
+
+# Pocketbase
+pocketbase-data

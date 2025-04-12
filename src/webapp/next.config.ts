@@ -2,7 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  /* config options here */
+  images: {
+    remotePatterns: [new URL('http://localhost:8080/api/files/**')],
+  },
 };
 
 export default nextConfig;
