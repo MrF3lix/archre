@@ -98,6 +98,11 @@ export const loadProcessDocuments = async (processId: string) => {
     return process
 }
 
+export const saveContractChanges = async (processId: string, changes: number) => {
+    const process = await pb.collection('process').update(processId, { changes })
+    return process
+
+}
 export const saveSignificantChange = async (processId: string, significant_changes: number) => {
     const process = await pb.collection('process').update(processId, { significant_changes })
     return process

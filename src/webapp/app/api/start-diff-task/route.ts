@@ -1,4 +1,4 @@
-import { setProcessStatus } from '@/helper/pocketbase'
+import { saveContractChanges, setProcessStatus } from '@/helper/pocketbase'
 import { NextRequest } from 'next/server'
 
 // curl -X GET reporter:8000/api/v1/contractdiff -H "Content-Type: application/json" -d '{"contract_old": "pbc_391014268/v42lwgjddn1sh44/2024_wording_aqd8c92b9q.md", "contract_new": "pbc_391014268/v42lwgjddn1sh44/2025_wording_85i1nmycrj.md" }'
@@ -19,16 +19,17 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         "contract_old": `${collection}/${processId}/${payload.files[0].split('/').at(-1)}`,
-        "contract_new": `${collection}/${processId}/${payload.files[1].split('/').at(-1)}` 
+        "contract_new": `${collection}/${processId}/${payload.files[1].split('/').at(-1)}`
       }),
     })
 
     const data = await response.json()
 
-    await setProcessStatus(payload.id, 'Ready')
-    return new Response(JSON.stringify(data), {
-      status: response.status,
-      headers: { 'Content-Type': 'application/json' },
+    await saveContractChanges(payload.id, data)
+    await setProcessStatus(payload.id, 'READY')
+
+    return new Response(JSON.stringify({}), {
+      status: response.status
     })
   } catch (error) {
     console.error('Error forwarding request:', error)

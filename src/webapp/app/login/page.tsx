@@ -16,8 +16,7 @@ const Login = () => {
     const [otp, setOtp] = useState<any>('')
 
     const otpRequest = async () => {
-        const result = await pb.collection('users').requestOTP(email);
-        console.log(result)
+        const result = await pb.collection('users').requestOTP(email)
         setOtpId(result.otpId)
     }
 

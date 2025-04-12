@@ -8,6 +8,7 @@ import { saveIrrelevantChanges, saveSignificantChange } from "@/helper/pocketbas
 import { useRouter } from "next/navigation"
 
 export const ChangeList = ({ process }: any) => {
+    console.log(process)
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(true)
     const [irrelevantItems, setIrrelevantItems] = useState([])
@@ -15,6 +16,7 @@ export const ChangeList = ({ process }: any) => {
 
     useEffect(() => {
         if(!process.significant_changes) {
+            setIsLoading(false)
             return
         }
 
@@ -74,7 +76,7 @@ export const ChangeList = ({ process }: any) => {
     }
 
     return (
-        <form onSubmit={save}>
+        <form onSubmit={save} className="flex flex-col gap-4">
             <div className="grid grid-flow-row-dense grid-cols-3 gap-4">
                 {!isLoading && process.changes?.significant_changes.map((c: any, i: never) => (
                     <div key={i}
@@ -107,7 +109,7 @@ export const ChangeList = ({ process }: any) => {
                                 name={`expert_${i}`}
                                 id={`expert_${i}`}
                                 type="text"
-                                defaultValue={process.significant_changes.find((s: any) => s.id == i)?.expert_note}
+                                defaultValue={process?.significant_changes?.find((s: any) => s.id == i)?.expert_note}
                                 placeholder="Add your Expert Insights into why this is relevant"
                                 className="p-2 text-xs border border-gray-300 rounded-sm"
                             />
