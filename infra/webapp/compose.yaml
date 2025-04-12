@@ -15,7 +15,7 @@ services:
       - "traefik.http.routers.webapp.tls=true"
       - "traefik.http.routers.webapp.entrypoints=websecure"
       - "traefik.http.routers.webapp.rule=Host(`webapp.localtest.me`)"
-      - "traefik.http.services.webapp.loadbalancer.server.port=8080"
+      - "traefik.http.services.webapp.loadbalancer.server.port=3000"
     networks:
       - traefik-public
     environment:
