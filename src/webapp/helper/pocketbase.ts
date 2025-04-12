@@ -59,11 +59,17 @@ export const getTerms = async (): Promise<Terms[]> => {
 }
 
 
-export const startProcess = async (formData: any) => {
-    const createdRecord = await pb.collection('process').create({
-        wording_previous_year: formData.wording_prev,
-        wording_next_year: formData.wording_next
-    })
+export const startProcess = async (files: any) => {
 
-    console.log(createdRecord)
+    // const formData = FormData()
+    // const tasks = Array.from(files).map(async (file: any) => {
+    //     console.log(file)
+    // })
+
+    // const createdRecord = await pb.collection('process').create({
+    //     wording_previous_year: formData.wording_prev,
+    //     wording_next_year: formData.wording_next
+    // })
+
+    // console.log(createdRecord)
 }
