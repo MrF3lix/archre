@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       specific_services:
-        description: "Comma-separated list of specific services to deploy (leave empty to auto-detect)"
+        description: "Space-separated list of specific services to deploy (leave empty to auto-detect)"
         required: false
         default: ""
 
@@ -45,16 +45,18 @@ jobs:
           # determine base commit for comparison
           if [ "${{ github.event_name }}" == "pull_request" ]; then
             BASE_SHA=${{ github.event.pull_request.base.sha }}
+            echo "Pull request base SHA: $BASE_SHA"
           else
-            # for push events, get previous commit
-            BASE_SHA=$(git rev-parse HEAD^)
+            # for push events, use GitHub's event context
+            BASE_SHA=${{ github.event.before }}
+            echo "Push event previous commit SHA: $BASE_SHA"
           fi
 
           # get list of changed files
           CHANGED_FILES=$(git diff --name-only $BASE_SHA HEAD)
 
           # extract service names from changed paths
-          SERVICES=$(echo "$CHANGED_FILES" | grep -E '^(src|infra)/' | sed -E 's|^(src|infra)/([^/]+).*|\2|' | sort -u)
+          SERVICES=$(echo "$CHANGED_FILES" | grep -E '^(src|infra)/' | cut -d'/' -f2 | awk '!seen[$0]++' | tr '\n' ' ' | xargs)
 
           if [ -z "$SERVICES" ]; then
             echo "No services have changed."
