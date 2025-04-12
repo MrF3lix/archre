@@ -58,7 +58,7 @@ tasks:
         vars:
           ENV_FILE: "{{.LOCAL_ENV}}"
           OVERRIDE: "{{.LOCAL_OVERRIDE}}"
-          CMD: "up -d"
+          CMD: "up --build -d"
 
   local:down:
     desc: Teardown local infrastructure
@@ -89,7 +89,7 @@ tasks:
         vars:
           ENV_FILE: "{{.REMOTE_ENV}}"
           OVERRIDE: "{{.REMOTE_OVERRIDE}}"
-          CMD: "up -d"
+          CMD: "up --build -d"
           DOCKER_CONTEXT: "{{.REMOTE_HOST}}"
 
   remote:down:
