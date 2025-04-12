@@ -1,0 +1,33 @@
+# ------------------------------------------------------------------------------------
+# services
+# ------------------------------------------------------------------------------------
+services:
+  backend:
+    image: flooq/backend
+    build:
+      context: ../../src/backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - 8080
+    networks:
+      - traefik-public
+    volumes:
+      - ./pocketbase-data:/pb/pb_data
+    environment:
+      - PB_ROOT_MAIL=${PB_ROOT_MAIL}
+      - PB_ROOT_PASSWORD=${PB_ROOT_PASSWORD}
+
+# ------------------------------------------------------------------------------------
+# volumes
+# ------------------------------------------------------------------------------------
+volumes:
+  pocketbase-data:
+
+# ------------------------------------------------------------------------------------
+# networks
+# ------------------------------------------------------------------------------------
+networks:
+  traefik-public:
+    name: traefik-public
+    external: false
