@@ -1,0 +1,17 @@
+# --------------------------------------------------------------------------------------
+# overrides
+# --------------------------------------------------------------------------------------
+services:
+  webapp:
+    labels:
+      - "traefik.http.routers.webapp.tls.certresolver=cfresolver"
+      - "traefik.http.routers.webapp.rule=Host(`flooq.io`)"
+    environment:
+      - NEXT_PUBLIC_POCKETBASE_URL=https://flooq.io
+
+# ------------------------------------------------------------------------------------
+# networks
+# ------------------------------------------------------------------------------------
+networks:
+  traefik-public:
+    external: true
