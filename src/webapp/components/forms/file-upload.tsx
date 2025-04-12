@@ -1,53 +1,47 @@
 'use client'
 
-import { startProcess } from "@/helper/pocketbase"
+import { uploadWordings } from "@/helper/pocketbase"
 import { DocumentPlusIcon } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 
-export const DocumentUpload = () => {
-  const router = useRouter()
-  const [isDragActive, setIsDragActive] = useState(false)
+export const DocumentUpload = ({ processId, setProcessId }: any) => {
+    const router = useRouter()
+    const [isLoading, setIsLoading] = useState(false)
+    const [isDragActive, setIsDragActive] = useState(false)
 
-  const uploadFile = async (files: any) => {
-    await startProcess(files)
-    console.log(files)
-    // const supabase = createClientComponentClient()
+    const uploadFile = async (files: any) => {
+        setIsLoading(true)
+        const id = await uploadWordings(processId, files)
+        if (!processId) {
+            setProcessId(id)
+        }
+        setIsLoading(false)
+        router.refresh()
+    }
 
-    // const tasks = Array.from(files).map(async (file: any) => {
-    //   return supabase
-    //     .storage
-    //     .from('documents')
-    //     .upload(`${customerId}/${file.name}`, file)
-    // })
+    const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault()
+        setIsDragActive(false)
+        uploadFile(e.dataTransfer.files)
+    }
 
-    // await Promise.all(tasks)
-
-
-    router.refresh()
-  }
-
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault()
-    setIsDragActive(false)
-    uploadFile(e.dataTransfer.files)
-  }
-
-  return (
-    <div
-      onDragEnter={() => setIsDragActive(true)}
-      onDragLeave={() => setIsDragActive(false)}
-      onDragOver={e => e.preventDefault()}
-      onDrop={handleDrop}
-      className={clsx(
-        "flex flex-col gap-2 items-center justify-center border-dotted border-2 w-full p-8 rounded-md",
-        isDragActive ? 'border-blue-500 text-blue-500 cursor-copy' : ''
-      )}
-    >
-      <DocumentPlusIcon className="w-8 h-8" />
-      Upload new File
-    </div>
-  )
+    return (
+        <div
+            onDragEnter={() => setIsDragActive(true)}
+            onDragLeave={() => setIsDragActive(false)}
+            onDragOver={e => e.preventDefault()}
+            onDrop={handleDrop}
+            className={clsx(
+                "flex flex-col gap-2 items-center justify-center border-dotted border-2 w-full p-8 rounded-md",
+                isDragActive ? 'border-blue-500 text-blue-500 cursor-copy' : '',
+                isLoading ? 'bg-gray-100' : ''
+            )}
+        >
+            <DocumentPlusIcon className="w-8 h-8" />
+            Drop the wordings
+        </div>
+    )
 }

@@ -5,9 +5,31 @@ import Cookies from 'js-cookie'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { useState } from 'react'
+
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_URL)
 
 const Login = () => {
     const router = useRouter()
+    const [otpId, setOtpId] = useState<any>()
+    const [email, setEmail] = useState<any>('')
+    const [otp, setOtp] = useState<any>('')
+
+    const otpRequest = async () => {
+        const result = await pb.collection('users').requestOTP(email);
+        console.log(result)
+        setOtpId(result.otpId)
+    }
+
+    const otpLogin = async () => {
+        const { token, record: model } = await pb.collection('users').authWithOTP(otpId, otp);
+
+        const cookie = JSON.stringify({ token, model });
+        Cookies.set('pb_auth', cookie)
+
+        router.push('/dashboard');
+
+    }
 
     const login = async () => {
         const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_URL)
@@ -29,9 +51,25 @@ const Login = () => {
                 <div className='bg-white w-96 p-4 rounded-sm border-1 border-gray-300 flex flex-col gap-4 items-center'>
                     <Image src="/logo.png" width={100} height={100} alt="Logo" priority={true} />
                     <h1 className="text-2xl leading-tight tracking-tight text-gray-900">Flooq Underwriter</h1>
-                    <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700 w-full" />
-                    <p className="text-xs text-gray-800">Sign in or create an account using one of the providers.</p>
-                    <Button variant="main" onClick={login} className='w-full'>Login with Gitub</Button>
+                    <div className='flex flex-col w-full gap-1'>
+                        <label className='text-xs'>Login with your E-Mail</label>
+                        <input className='p-2 border rounded-sm border-gray-300 text-sm' type='email' placeholder='E-Mail Address' value={email} onChange={e => setEmail(e.target.value)} />
+                    </div>
+                    {!otpId &&
+                        <Button variant="main" className='w-full' onClick={() => otpRequest()}>Request OTP</Button>
+                    }
+                    {otpId &&
+                        <>
+                            <div className='flex flex-col w-full gap-1'>
+                                <label className='text-xs'>Your Code</label>
+                                <input className='p-2 border rounded-sm border-gray-300 text-sm' type='text' placeholder='One Time Password' value={otp} onChange={e => setOtp(e.target.value)} />
+                            </div>
+                            <Button variant="main" className='w-full' onClick={() => otpLogin()}>Sign In</Button>
+                        </>
+                    }
+                    <hr className="h-px bg-gray-200 border-0 w-full" />
+                    <p className="text-xs text-gray-800">Or sign in with an existing Account</p>
+                    <Button onClick={login} className='w-full'>Login with Gitub</Button>
                     <Button onClick={login} className='w-full'>Login with Microsoft</Button>
                     <Button onClick={login} className='w-full'>Login with Google</Button>
 
