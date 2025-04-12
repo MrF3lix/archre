@@ -4,7 +4,7 @@
 2. Create a new report
 
   1. Select Client
-  2. Upload submission files
+  2. Upload submission files 
   3. Upload wording
 
   4. Draft Report is created
