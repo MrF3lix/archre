@@ -10,6 +10,8 @@ const Upload = () => {
         const process = await loadProcessDocuments(id)
         const urls = await getWordingFileUrls(process)
 
+        console.log(urls)
+
         fetch('/api/start-diff-task', {
             method: 'POST',
             headers: {

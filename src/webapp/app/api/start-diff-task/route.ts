@@ -9,14 +9,17 @@ export async function POST(req: NextRequest) {
     const payload = await req.json()
     await setProcessStatus(payload.id, 'PROCESSING')
 
+    const collection = 'pbc_391014268'
+    const processId = payload.id
+
     const response = await fetch(`${process.env.REPORTER_URL}/contractdiff `, {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        "contract_old": "pbc_391014268/v42lwgjddn1sh44/2024_wording_aqd8c92b9q.md",
-        "contract_new": "pbc_391014268/v42lwgjddn1sh44/2025_wording_85i1nmycrj.md" 
+        "contract_old": `${collection}/${processId}/${payload.files[0].split('/').at(-1)}`,
+        "contract_new": `${collection}/${processId}/${payload.files[1].split('/').at(-1)}` 
       }),
     })
 
