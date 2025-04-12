@@ -57,3 +57,13 @@ export const getTerms = async (): Promise<Terms[]> => {
         content: c.content
     }))
 }
+
+
+export const startProcess = async (formData: any) => {
+    const createdRecord = await pb.collection('process').create({
+        wording_previous_year: formData.wording_prev,
+        wording_next_year: formData.wording_next
+    })
+
+    console.log(createdRecord)
+}
