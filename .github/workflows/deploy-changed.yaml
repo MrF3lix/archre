@@ -91,7 +91,7 @@ jobs:
       - name: Configure AGE key
         run: |
           mkdir -p ~/.config/sops/age
-          echo "${{ secrets.AGE_KEY }}" > ~/.config/sops/age/keys.txt
+          printf '%s\n' "${{ secrets.AGE_KEY }}" > ~/.config/sops/age/keys.txt
           chmod 600 ~/.config/sops/age/keys.txt
 
       - name: Set up docker context
