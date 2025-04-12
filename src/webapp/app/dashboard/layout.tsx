@@ -35,7 +35,7 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) 
   return (
     <>
       <nav className="bg-white w-full">
-        <div className="w-full max-w-[1200px] mx-auto flex">
+        <div className="w-full max-w-[1200px] mx-auto flex px-4">
           <div className="px-4 py-2 flex flex-1 gap-4 justify-between items-center">
             <div className="flex gap-4 items-center">
               <Image src="/logo.png" width={50} height={50} alt="Logo" priority={true} />
@@ -45,11 +45,11 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) 
               <DropdownMenuTrigger>
                 <Avatar>
                   <AvatarImage src={avatarUrl} />
-                  <AvatarFallback>{auth.model.name[0]}</AvatarFallback>
+                  <AvatarFallback>FS</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuLabel>{auth.model.name}</DropdownMenuLabel>
+                <DropdownMenuLabel>{auth?.model?.name}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={logout} className="cursor-pointer">
                   <ArrowLeftEndOnRectangleIcon width={10} />
@@ -61,7 +61,7 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) 
         </div>
       </nav>
       <main className="w-full max-w-[1200px] mx-auto flex flex-col min-h-screen">
-        <div className="p-4 flex flex-1 flex-col gap-4 justify-center items-center">
+        <div className="p-8 flex flex-1 flex-col gap-4 justify-center items-center">
           {children}
         </div>
       </main >
