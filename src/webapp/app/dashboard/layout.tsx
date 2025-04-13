@@ -24,8 +24,9 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) 
   const [avatarUrl, setAvatarUrl] = useState<string>()
 
   const loadAvatar = async () => {
-    const url = await getAvatarUrl(auth.model)
-    setAvatarUrl(url)
+    // const url = await getAvatarUrl(auth.model)
+    // setAvatarUrl(url)
+    setAvatarUrl("https://api.flooq.io/api/files/_pb_users_auth_/rcu72g9142b0xe2/7260168_v_4_ys3jkp91co_pttskpy9qg.jpg?token=")
 
   }
 
@@ -50,7 +51,7 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) 
                 </Avatar>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuLabel>{auth?.model?.name}</DropdownMenuLabel>
+                <DropdownMenuLabel>Felix Saaro</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={logout} className="cursor-pointer">
                   <ArrowLeftEndOnRectangleIcon width={10} />
