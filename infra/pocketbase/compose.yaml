@@ -16,6 +16,7 @@ services:
       - "traefik.http.routers.pocketbase.entrypoints=websecure"
       - "traefik.http.routers.pocketbase.rule=Host(`api.localtest.me`)"
       - "traefik.http.services.pocketbase.loadbalancer.server.port=8080"
+
     networks:
       - traefik-public
     volumes:
