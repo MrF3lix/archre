@@ -9,9 +9,6 @@ export async function POST(req: NextRequest) {
 
     const client = await getClient(payload.client)
 
-    console.log({client})
-
-
     console.log({
       "client": client.country,
       "investigation_points": payload.investigation_points,
@@ -25,18 +22,17 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         "client": client.country,
-        "investigation_points": payload.investigation_points,
+        "investigation_points": payload.investigation_points.map((x: any) => `${x.change}, EXPERT NOTE: ${x.expert_note}`),
         "significant_changes_json": payload.significant_changes_json
       }),
     })
 
     const data = await response.json()
 
+    console.log(JSON.stringify(data, null, 2))
 
-    console.log(data)
-
-    // await saveProcessReport(payload.id, data)
-    // setProcessStatus(payload.id, 'READY')
+    await saveProcessReport(payload.id, data)
+    setProcessStatus(payload.id, 'Done')
 
     return new Response(JSON.stringify({}), {
       status: response.status
