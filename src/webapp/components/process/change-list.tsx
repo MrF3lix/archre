@@ -70,7 +70,6 @@ export const ChangeList = ({ process }: any) => {
 
         await saveIrrelevantChanges(process.id, irrelevantItems)
         await saveSignificantChange(process.id, significant_changes.filter((s: any) => s != null))
-
         router.refresh()
     }
 

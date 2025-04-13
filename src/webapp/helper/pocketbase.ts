@@ -105,6 +105,11 @@ export const saveContractChanges = async (processId: string, changes: number) =>
     return process
 
 }
+export const saveProcessReport = async (processId: string, report: number) => {
+    const process = await pb.collection('process').update(processId, { report })
+    return process
+
+}
 export const saveSignificantChange = async (processId: string, significant_changes: number) => {
     const process = await pb.collection('process').update(processId, { significant_changes })
     return process
@@ -124,10 +129,13 @@ export const setProcessStatus = async (processId: string, status: any) => {
 
 export const subscribeToProcessStatusChange = (processId: string, callback: any) => {
     try {
+        const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_URL)
+
         pb.collection('process').subscribe(processId, (e) => {
             callback(e)
         });
-    } catch {
+    } catch(e) {
+        console.log(e)
         console.error({ processId })
     }
 }

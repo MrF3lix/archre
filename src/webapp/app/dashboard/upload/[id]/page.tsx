@@ -3,6 +3,7 @@
 import { DocumentUpload } from "@/components/forms/file-upload"
 import { ChangeList } from "@/components/process/change-list"
 import { Editor } from "@/components/process/editor"
+import { GenerateReport } from "@/components/process/generate-report"
 import { Reloader } from "@/components/process/reloader"
 import { getWordingFileUrls, loadProcessDocuments } from "@/helper/pocketbase"
 import { ArrowPathIcon, DocumentCheckIcon } from "@heroicons/react/24/outline"
@@ -58,11 +59,10 @@ const Upload = async ({ params }: any) => {
                 }
                 {process.significant_changes &&
                     <>
-                        <h2 className="text-2xl font-bold">Edit the Report</h2>
+                        <h2 className="text-2xl font-bold">Generate Report</h2>
                         <div className="bg-white p-4 rounded-sm flex flex-col gap-4">
-                            <p className="text-sm">Here is a draft of the underwriting report.</p>
-
-                            <Editor processId={params.id} initialValue={process.report_draft} />
+                            <p className="text-sm text-gray-700">Click generate to start the report generation task.</p>
+                            <GenerateReport process={process} />
                         </div>
                     </>
 
