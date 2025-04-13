@@ -35,6 +35,20 @@ const columns: ColumnDef<Process>[] = [
         }
     },
     {
+        accessorKey: "cedant",
+        header: ({ column }) => {
+            return (
+                <button
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                    className="flex font-bold"
+                >
+                    <span>Cedant</span>
+                    <ArrowsUpDownIcon className="ml-2 h-4 w-4" />
+                </button>
+            )
+        }
+    },
+    {
         accessorKey: "status",
         header: ({ column }) => {
             return (
@@ -91,6 +105,7 @@ const ProcessTable = () => {
 
     const state = useAsync(async () => {
         const clients = await getProcesses()
+        console.log(clients)
         return clients
     }, []);
 

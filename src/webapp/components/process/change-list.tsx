@@ -48,7 +48,7 @@ export const ChangeList = ({ process }: any) => {
     const save = async (e: any) => {
         e.preventDefault()
         const data = new FormData(e.currentTarget)
-        const significant_changes = process.changes?.significant_changes.map((c: any, i: never) => {
+        const significant_changes = process.changes?.suggestions_for_investigation.map((c: any, i: never) => {
             if (irrelevantItems.includes(i)) {
                 return undefined
             }
@@ -77,7 +77,7 @@ export const ChangeList = ({ process }: any) => {
     return (
         <form onSubmit={save} className="flex flex-col gap-4">
             <div className="grid grid-flow-row-dense grid-cols-3 gap-4">
-                {!isLoading && process.changes?.significant_changes.map((c: any, i: never) => (
+                {!isLoading && process.changes?.suggestions_for_investigation.map((c: any, i: never) => (
                     <div key={i}
                         className={clsx(
                             "p-2 flex flex-col gap-2 border  rounded-sm justify-between",

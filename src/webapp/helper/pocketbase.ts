@@ -16,7 +16,7 @@ export const getWordingFileUrls = async (model: any) => {
 }
 
 export const getClient = async (id: string) => {
-    const model = await pb.collection('clients').getOne(id)
+    const model = await pb.collection('cedant').getOne(id)
     return model
 }
 
@@ -67,27 +67,29 @@ export const getTerms = async (): Promise<Terms[]> => {
 
 export type Process = {
     id: string,
+    cedant: string,
     status: string,
     created: string
 }
 
 export const getProcesses = async(): Promise<Process[]> => {
-    const models = await pb.collection('process').getFullList()
-
+    const models = await pb.collection('process').getFullList({expand: 'client'})
     return models.map(c => ({
         id: c.id,
+        cedant: c.expand?.client?.name || '-',
         status: c.status,
         created: dayjs(c.created).format('YYYY-MM-DD HH:mm'),
     }))
 }
 
 
-export const uploadWordings = async (processId: any | undefined, files: any) => {
+export const uploadWordings = async (processId: any | undefined, client: any, files: any) => {
     const formData = new FormData()
 
     Array.from(files).map(async (file: any) => {
         formData.append('wordings', file)
     })
+    formData.append('client', client)
 
     const process = await pb.collection('process').create(formData)
     return process.id

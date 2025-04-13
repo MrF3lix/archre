@@ -32,15 +32,26 @@ const Upload = async ({ params }: any) => {
                     {process.status == 'PROCESSING' &&
                         <>
                             <p className="text-sm flex items-center gap-2 font-bold"><ArrowPathIcon className='w-4 h-4 animate-spin' /> Processing Documents</p>
-                            <p className="text-sm">Computes the YoY difference between the uploaded writings. Check back in a minute when we are done processing your contracts.</p>
+                            <p className="text-sm text-gray-700">Computes the YoY difference between the uploaded writings. Check back in a minute when we are done processing your contracts.</p>
                         </>
                     }
                 </div>
                 {process.status != 'PROCESSING' &&
                     <>
-                        <h2 className="text-2xl font-bold">Select Significant Changes</h2>
+                        <h2 className="text-2xl font-bold">Changes</h2>
                         <div className="bg-white p-4 rounded-sm flex flex-col gap-4">
-                            <p className="text-sm">Select the changes that you assume to be most significant.</p>
+                            <p className="text-sm text-gray-700">The following changes were identified.</p>
+                            <ul className="list-disc px-4">
+                                {process.changes?.significant_changes.map((c: any, i: never) => (
+                                    <li key={i} className="text-sm text-gray-800 p-2">
+                                        {c}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <h2 className="text-2xl font-bold">Investigate</h2>
+                        <div className="bg-white p-4 rounded-sm flex flex-col gap-4">
+                            <p className="text-sm text-gray-700">Choose the suggestions for further investigation.</p>
                             <ChangeList process={process} />
                         </div>
                     </>
