@@ -16,6 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 
@@ -37,10 +38,10 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) 
       <nav className="bg-white w-full">
         <div className="w-full max-w-[1200px] mx-auto flex px-4">
           <div className="px-4 py-2 flex flex-1 gap-4 justify-between items-center">
-            <div className="flex gap-4 items-center">
+            <Link href="/dashboard" className="flex gap-4 items-center">
               <Image src="/logo.png" width={50} height={50} alt="Logo" priority={true} />
               <p className="text-xl">Underwriter Assistant</p>
-            </div>
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger>
                 <Avatar>

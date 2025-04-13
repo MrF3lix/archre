@@ -30,12 +30,12 @@ const Login = () => {
 
     }
 
-    const login = async () => {
+    const login = async (provider: string) => {
         const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_URL)
         const { token, record: model } = await pb
             .collection('users')
             .authWithOAuth2({
-                provider: 'github'
+                provider: provider
             })
 
         const cookie = JSON.stringify({ token, model });
@@ -68,9 +68,8 @@ const Login = () => {
                     }
                     <hr className="h-px bg-gray-200 border-0 w-full" />
                     <p className="text-xs text-gray-800">Or sign in with an existing Account</p>
-                    <Button onClick={login} className='w-full'>Login with Gitub</Button>
-                    <Button onClick={login} className='w-full'>Login with Microsoft</Button>
-                    <Button onClick={login} className='w-full'>Login with Google</Button>
+                    <Button onClick={() => login('github')} className='w-full'>Login with Gitub</Button>
+                    <Button onClick={() => login('oidc')} className='w-full'>Login with OIDC</Button>
 
                 </div>
             </div>

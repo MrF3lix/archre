@@ -8,7 +8,6 @@ import { saveIrrelevantChanges, saveSignificantChange } from "@/helper/pocketbas
 import { useRouter } from "next/navigation"
 
 export const ChangeList = ({ process }: any) => {
-    console.log(process)
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(true)
     const [irrelevantItems, setIrrelevantItems] = useState([])

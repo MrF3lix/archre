@@ -1,6 +1,6 @@
 'use client'
 
-import { uploadWordings } from "@/helper/pocketbase"
+import { setProcessStatus, uploadWordings } from "@/helper/pocketbase"
 import { DocumentPlusIcon } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import { useRouter } from "next/navigation"
@@ -15,6 +15,8 @@ export const DocumentUpload = ({ processId, setProcessId }: any) => {
     const uploadFile = async (files: any) => {
         setIsLoading(true)
         const id = await uploadWordings(processId, files)
+
+        await setProcessStatus(id, 'PROCESSING')
         if (!processId) {
             setProcessId(id)
         }

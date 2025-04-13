@@ -125,3 +125,9 @@ export const subscribeToProcessStatusChange = (processId: string, callback: any)
         callback(e)
     });
 }
+
+export const saveReport = async (processId: string, report: any) => {
+    const process = await pb.collection('process').update(processId, { report_draft: report })
+    return process
+
+}

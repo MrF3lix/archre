@@ -22,7 +22,7 @@ const Upload = () => {
     return (
         <div className="w-full flex-1 flex flex-col gap-4">
             <>
-                <h2 className="text-2xl font-bold">1. Contract Changes</h2>
+                <h2 className="text-2xl font-bold">Upload Contracts</h2>
                 <div className="bg-white p-4 rounded-sm flex flex-col gap-4">
                     <p className="text-sm">
                         Upload two wordings to find the significant differences.

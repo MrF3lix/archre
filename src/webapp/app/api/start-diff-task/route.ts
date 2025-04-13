@@ -7,8 +7,6 @@ export async function POST(req: NextRequest) {
   try {
 
     const payload = await req.json()
-    await setProcessStatus(payload.id, 'PROCESSING')
-
     const collection = 'pbc_391014268'
     const processId = payload.id
 
@@ -26,7 +24,8 @@ export async function POST(req: NextRequest) {
     const data = await response.json()
 
     await saveContractChanges(payload.id, data)
-    await setProcessStatus(payload.id, 'READY')
+
+    setProcessStatus(payload.id, 'READY')
 
     return new Response(JSON.stringify({}), {
       status: response.status
