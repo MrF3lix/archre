@@ -31,8 +31,8 @@ export async function POST(req: NextRequest) {
 
     console.log(JSON.stringify(data, null, 2))
 
-    await saveProcessReport(payload.id, data)
-    setProcessStatus(payload.id, 'Done')
+    // await saveProcessReport(payload.id, data)
+    // setProcessStatus(payload.id, 'Done')
 
     return new Response(JSON.stringify({}), {
       status: response.status
