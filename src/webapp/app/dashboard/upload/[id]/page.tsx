@@ -72,7 +72,7 @@ const Upload = async ({ params }: any) => {
                 {process.report &&
                     <>
                         <h2 className="text-2xl font-bold">Report Draft</h2>
-                        <div className="bg-white p-4 rounded-sm flex flex-col gap-4">
+                        <div className="bg-white p-4 rounded-sm flex flex-col gap-4 text-wrap wrap-break-word whitespace-break-spaces">
 
                             {process?.report['report_markdown'] &&
                                 <>

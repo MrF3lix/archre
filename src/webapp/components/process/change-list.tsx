@@ -114,6 +114,17 @@ export const ChangeList = ({ process }: any) => {
                         }
                     </div>
                 ))}
+                <div className="p-2 flex flex-col gap-2 border  rounded-sm justify-between border-gray-300">
+                    
+                    <span className="text-sm">Add Further Investigation</span>
+                    <input
+                        name={`expert_new`}
+                        id={`expert_new`}
+                        type="text"
+                        placeholder="Add a futher investigation point"
+                        className="p-2 text-xs border border-gray-300 rounded-sm"
+                    />
+                </div>
             </div>
             <div className="flex justify-end">
                 <Button variant="main" type="submit">Save Significant Changes</Button>
