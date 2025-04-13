@@ -43,6 +43,8 @@ WORKDIR /app
 # copy environment, but not the source code
 COPY --from=builder --chown=app:app /app/.venv /app/.venv
 
+COPY ./files/ files
+
 # expose api port
 EXPOSE 8000
 

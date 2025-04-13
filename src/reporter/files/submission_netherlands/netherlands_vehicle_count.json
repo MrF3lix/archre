@@ -1,0 +1,96 @@
+{
+    "title": "Company X - Vehicle count Total Portfolio (Netherlands + Belgium + Co B)",
+    "metadata": {
+      "Cedant": "Company X Re",
+      "Currency": "EUR",
+      "Renewal": 2024
+    },
+    "tables": [
+      {
+        "id": "vehicle_count_by_type",
+        "description": "Company X Group Total (Company X Schadeverzekeringen NV, Company X Non-Life Belgium and ABN AMRO) Overall Vehicle count & Number of policies split up in different car covers.",
+        "footnotes": [
+          "*** Footnote text for Tractors/Land equipment is not fully visible or provided in the image."
+        ],
+        "data": [
+          {
+            "Vehicle type": "Private Cars (incl. Taxi)",
+            "HullCovers_2022": 330798,
+            "SmallHullCovers_2022": 195590,
+            "HullCovers_2023": 342617,
+            "SmallHullCovers_2023": 228658
+          },
+          {
+            "Vehicle type": "Vans, trucks, carriers",
+            "HullCovers_2022": 51499,
+            "SmallHullCovers_2022": 21590,
+            "HullCovers_2023": 46963,
+            "SmallHullCovers_2023": 22150
+          },
+          {
+            "Vehicle type": "Opleggers",
+            "HullCovers_2022": 7942,
+            "SmallHullCovers_2022": 2640,
+            "HullCovers_2023": 5561,
+            "SmallHullCovers_2023": 2589
+          },
+          {
+            "Vehicle type": "Motor cycles",
+            "HullCovers_2022": 3623,
+            "SmallHullCovers_2022": 7595,
+            "HullCovers_2023": 3607,
+            "SmallHullCovers_2023": 7850
+          },
+          {
+            "Vehicle type": "Mopeds",
+            "HullCovers_2022": 5404,
+            "SmallHullCovers_2022": 1183,
+            "HullCovers_2023": 5788,
+            "SmallHullCovers_2023": 667
+          },
+          {
+            "Vehicle type": "Caravans",
+            "HullCovers_2022": 7855,
+            "SmallHullCovers_2022": 402,
+            "HullCovers_2023": 7053,
+            "SmallHullCovers_2023": 474
+          },
+          {
+            "Vehicle type": "Busses",
+            "HullCovers_2022": 0,
+            "SmallHullCovers_2022": 0,
+            "HullCovers_2023": 0,
+            "SmallHullCovers_2023": 0
+          },
+          {
+            "Vehicle type": "Garage",
+            "HullCovers_2022": 750,
+            "SmallHullCovers_2022": 0,
+            "HullCovers_2023": 1140,
+            "SmallHullCovers_2023": 0
+          },
+          {
+            "Vehicle type": "Tractors/Land equipment***",
+            "HullCovers_2022": 32518,
+            "SmallHullCovers_2022": 3606,
+            "HullCovers_2023": 19482,
+            "SmallHullCovers_2023": 141
+          },
+          {
+            "Vehicle type": "Overig ongekentekend",
+            "HullCovers_2022": 75,
+            "SmallHullCovers_2022": 29,
+            "HullCovers_2023": 0,
+            "SmallHullCovers_2023": 0
+          },
+          {
+            "Vehicle type": "Total",
+            "HullCovers_2022": 440461,
+            "SmallHullCovers_2022": 232632,
+            "HullCovers_2023": 432209,
+            "SmallHullCovers_2023": 262528
+          }
+        ]
+      }
+    ]
+  }

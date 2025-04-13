@@ -1,0 +1,314 @@
+{
+    "title": "Company X - Property Cat XL - Premiums",
+    "metadata": {
+      "Cedant": "Company X Re",
+      "Currency": "EUR",
+      "Renewal": 2024
+    },
+    "tables": [
+      {
+        "id": "premiums_summary_2018_2024",
+        "description": "Premiums Summary for Fire & Engineering by Company (2018-2024 Estimates)",
+        "footnotes": [
+          "* since 2018 Company X and Company Y for both Fire and Engineering",
+          "** since 2021 Company Z premium part of Company X",
+          "Motor Hull Premium - not stated, as this premium is NOT part of the subject premium income of the Cat Programme"
+        ],
+        "data": [
+          {
+            "Year": "2018 *",
+            "CompanyX_Netherlands_FireEngineering": 342905600,
+            "CompanyX_Belgium_FireEngineering": 27057248,
+            "CoA_FireEngineering": {
+              "value": 114350000,
+              "note": null
+            },
+            "CoB_Fire": 52000000,
+            "Total_FireEngineering": 421962848
+          },
+          {
+            "Year": "2019",
+            "CompanyX_Netherlands_FireEngineering": 342015047,
+            "CompanyX_Belgium_FireEngineering": 28591402,
+            "CoA_FireEngineering": {
+              "value": 127760634,
+              "note": null
+            },
+            "CoB_Fire": 54769295,
+            "Total_FireEngineering": 425375744
+          },
+          {
+            "Year": "2020",
+            "CompanyX_Netherlands_FireEngineering": 340873708,
+            "CompanyX_Belgium_FireEngineering": 28566463,
+            "CoA_FireEngineering": {
+              "value": 138800000,
+              "note": null
+            },
+            "CoB_Fire": 55610123,
+            "Total_FireEngineering": 425050294
+          },
+          {
+            "Year": "2021 **",
+            "CompanyX_Netherlands_FireEngineering": 484531660,
+            "CompanyX_Belgium_FireEngineering": 29798685,
+            "CoA_FireEngineering": {
+              "value": null,
+              "note": "Included in Company X"
+            },
+            "CoB_Fire": 49823577,
+            "Total_FireEngineering": 564153922
+          },
+          {
+            "Year": "2022",
+            "CompanyX_Netherlands_FireEngineering": 478751330,
+            "CompanyX_Belgium_FireEngineering": 29466046,
+            "CoA_FireEngineering": {
+              "value": null,
+              "note": "Included in Company X"
+            },
+            "CoB_Fire": 48148241,
+            "Total_FireEngineering": 556365616
+          },
+          {
+            "Year": "2023 orig. est.",
+            "CompanyX_Netherlands_FireEngineering": 517350000,
+            "CompanyX_Belgium_FireEngineering": 32650000,
+            "CoA_FireEngineering": {
+              "value": null,
+              "note": "Included in Company X"
+            },
+            "CoB_Fire": 50000000,
+            "Total_FireEngineering": 600000000
+          },
+          {
+            "Year": "2023 rev. est.",
+            "CompanyX_Netherlands_FireEngineering": 503500000,
+            "CompanyX_Belgium_FireEngineering": 31000000,
+            "CoA_FireEngineering": {
+              "value": null,
+              "note": "Included in Company X"
+            },
+            "CoB_Fire": 51000000,
+            "Total_FireEngineering": 585500000
+          },
+          {
+            "Year": "2024 est.",
+            "CompanyX_Netherlands_FireEngineering": 516000000,
+            "CompanyX_Belgium_FireEngineering": 34000000,
+            "CoA_FireEngineering": {
+              "value": null,
+              "note": "Included in Company X"
+            },
+            "CoB_Fire": 53000000,
+            "Total_FireEngineering": 603000000
+          }
+        ]
+      },
+      {
+        "id": "premiums_detail_2009_2019",
+        "description": "Premiums Detail by Line of Business and Company (2009-2019)",
+        "footnotes": [
+          "Subject Premium Income:",
+          "Company X Cat XL includes Motor Hull premium up to 2017",
+          "Co C Cat XL excludes Motor Hull premium",
+          "Co C Motor Hull premium estimated @ 40% of total MTPL related premium",
+          "Co A Cat XL includes Motor Hull premium"
+        ],
+        "data": [
+          {
+            "Year": 2009,
+            "CompanyX_Netherlands_Fire": 183586933,
+            "CompanyX_Netherlands_Engineering": 15636766,
+            "CompanyX_Netherlands_MotorHull": 48745557,
+            "CompanyX_Belgium_Fire": 17007574,
+            "CompanyX_Belgium_MotorHull": 6052035,
+            "CoC_Engineering": 132000046,
+            "CoC_MotorHull": 31451542,
+            "CoB_Fire": 69443290,
+            "CoB_MotorHull": 47792721,
+            "CoA_Fire": 14325899,
+            "CoA_MotorHull": 105750000,
+            "OverallTotal_FireEngineering": 52700000,
+            "CombinedTotal_AllCompanies": 533225581
+          },
+          {
+            "Year": 2010,
+            "CompanyX_Netherlands_Fire": 178463667,
+            "CompanyX_Netherlands_Engineering": 16201428,
+            "CompanyX_Netherlands_MotorHull": 43676902,
+            "CompanyX_Belgium_Fire": 17767860,
+            "CompanyX_Belgium_MotorHull": 7681183,
+            "CoC_Engineering": 135821751,
+            "CoC_MotorHull": 28364232,
+            "CoB_Fire": 75534532,
+            "CoB_MotorHull": 48293719,
+            "CoA_Fire": 14206951,
+            "CoA_MotorHull": 107950000,
+            "OverallTotal_FireEngineering": 53150000,
+            "CombinedTotal_AllCompanies": 532862656
+          },
+          {
+            "Year": 2011,
+            "CompanyX_Netherlands_Fire": 171601074,
+            "CompanyX_Netherlands_Engineering": 15687762,
+            "CompanyX_Netherlands_MotorHull": 47377922,
+            "CompanyX_Belgium_Fire": 19354315,
+            "CompanyX_Belgium_MotorHull": 9573835,
+            "CoC_Engineering": 129322773,
+            "CoC_MotorHull": 26372753,
+            "CoB_Fire": 70312706,
+            "CoB_MotorHull": 45205915,
+            "CoA_Fire": 13404076,
+            "CoA_MotorHull": 107850000,
+            "OverallTotal_FireEngineering": 54350000,
+            "CombinedTotal_AllCompanies": 515394591
+          },
+          {
+            "Year": 2012,
+            "CompanyX_Netherlands_Fire": 171596443,
+            "CompanyX_Netherlands_Engineering": 15242915,
+            "CompanyX_Netherlands_MotorHull": 45970724,
+            "CompanyX_Belgium_Fire": 21099972,
+            "CompanyX_Belgium_MotorHull": 10581550,
+            "CoC_Engineering": 133521111,
+            "CoC_MotorHull": 29019628,
+            "CoB_Fire": 68983523,
+            "CoB_MotorHull": 45461234,
+            "CoA_Fire": 14134443,
+            "CoA_MotorHull": 106650000,
+            "OverallTotal_FireEngineering": 52900000,
+            "CombinedTotal_AllCompanies": 522591302
+          },
+          {
+            "Year": 2013,
+            "CompanyX_Netherlands_Fire": 164425663,
+            "CompanyX_Netherlands_Engineering": 13863155,
+            "CompanyX_Netherlands_MotorHull": 46473397,
+            "CompanyX_Belgium_Fire": 23745601,
+            "CompanyX_Belgium_MotorHull": 11185132,
+            "CoC_Engineering": 125416479,
+            "CoC_MotorHull": 26101201,
+            "CoB_Fire": 65531866,
+            "CoB_MotorHull": 46606038,
+            "CoA_Fire": 13801922,
+            "CoA_MotorHull": 104750000,
+            "OverallTotal_FireEngineering": 53750000,
+            "CombinedTotal_AllCompanies": 504908136
+          },
+          {
+            "Year": 2014,
+            "CompanyX_Netherlands_Fire": 160958696,
+            "CompanyX_Netherlands_Engineering": 12161045,
+            "CompanyX_Netherlands_MotorHull": 46599701,
+            "CompanyX_Belgium_Fire": 25273304,
+            "CompanyX_Belgium_MotorHull": 11260858,
+            "CoC_Engineering": 122680375,
+            "CoC_MotorHull": 24922149,
+            "CoB_Fire": 61952462,
+            "CoB_MotorHull": 46143233,
+            "CoA_Fire": 13714706,
+            "CoA_MotorHull": 104850000,
+            "OverallTotal_FireEngineering": 52850000,
+            "CombinedTotal_AllCompanies": 496988800
+          },
+          {
+            "Year": 2015,
+            "CompanyX_Netherlands_Fire": 159344278,
+            "CompanyX_Netherlands_Engineering": 11512099,
+            "CompanyX_Netherlands_MotorHull": 44629544,
+            "CompanyX_Belgium_Fire": 26068931,
+            "CompanyX_Belgium_MotorHull": 11142693,
+            "CoC_Engineering": 128000379,
+            "CoC_MotorHull": 22906653,
+            "CoB_Fire": 64401610,
+            "CoB_MotorHull": 46830883,
+            "CoA_Fire": 13714862,
+            "CoA_MotorHull": 96750000,
+            "OverallTotal_FireEngineering": 44550000,
+            "CombinedTotal_AllCompanies": 491413222
+          },
+          {
+            "Year": 2016,
+            "CompanyX_Netherlands_Fire": 163358277,
+            "CompanyX_Netherlands_Engineering": 12013054,
+            "CompanyX_Netherlands_MotorHull": 43383790,
+            "CompanyX_Belgium_Fire": 26082247,
+            "CompanyX_Belgium_MotorHull": 10898113,
+            "CoC_Engineering": 151252584,
+            "CoC_MotorHull": 25058584,
+            "CoB_Fire": 70971331,
+            "CoB_MotorHull": 49005743,
+            "CoA_Fire": 13057901,
+            "CoA_MotorHull": 97450000,
+            "OverallTotal_FireEngineering": 40500000,
+            "CombinedTotal_AllCompanies": 524220488
+          },
+          {
+            "Year": 2017,
+            "CompanyX_Netherlands_Fire": 162315466,
+            "CompanyX_Netherlands_Engineering": 12879616,
+            "CompanyX_Netherlands_MotorHull": 40255655,
+            "CompanyX_Belgium_Fire": 26507321,
+            "CompanyX_Belgium_MotorHull": 9738168,
+            "CoC_Engineering": 151220064,
+            "CoC_MotorHull": 27156347,
+            "CoB_Fire": 66209549,
+            "CoB_MotorHull": 49592780,
+            "CoA_Fire": 12673102,
+            "CoA_MotorHull": 102800000,
+            "OverallTotal_FireEngineering": 40250000,
+            "CombinedTotal_AllCompanies": 532471594
+          },
+          {
+            "Year": "2018 est",
+            "CompanyX_Netherlands_Fire": 162850000,
+            "CompanyX_Netherlands_Engineering": 12350000,
+            "CompanyX_Netherlands_MotorHull": 40350000,
+            "CompanyX_Belgium_Fire": 24700000,
+            "CompanyX_Belgium_MotorHull": 9800000,
+            "CoC_Engineering": 147500000,
+            "CoC_MotorHull": 16250000,
+            "CoB_Fire": 70000000,
+            "CoB_MotorHull": 48500000,
+            "CoA_Fire": 13200000,
+            "CoA_MotorHull": 102500000,
+            "OverallTotal_FireEngineering": 42300000,
+            "CombinedTotal_AllCompanies": 514650000
+          },
+          {
+            "Year": "2018 rev. est.",
+            "CompanyX_Netherlands_Fire": 163750000,
+            "CompanyX_Netherlands_Engineering": 13850000,
+            "CompanyX_Netherlands_MotorHull": 41750000,
+            "CompanyX_Belgium_Fire": 27300000,
+            "CompanyX_Belgium_MotorHull": 9050000,
+            "CoC_Engineering": 148000000,
+            "CoC_MotorHull": 17000000,
+            "CoB_Fire": 69000000,
+            "CoB_MotorHull": 50000000,
+            "CoA_Fire": 13200000,
+            "CoA_MotorHull": 110600000,
+            "OverallTotal_FireEngineering": 42350000,
+            "CombinedTotal_AllCompanies": 530500000
+          },
+          {
+            "Year": "2019 orig. est.",
+            "CompanyX_Netherlands_Fire": 162750000,
+            "CompanyX_Netherlands_Engineering": 12500000,
+            "CompanyX_Netherlands_MotorHull": 41500000,
+            "CompanyX_Belgium_Fire": 27000000,
+            "CompanyX_Belgium_MotorHull": 8750000,
+            "CoC_Engineering": 155000000,
+            "CoC_MotorHull": 17500000,
+            "CoB_Fire": 73000000,
+            "CoB_MotorHull": 51000000,
+            "CoA_Fire": 14000000,
+            "CoA_MotorHull": 112550000,
+            "OverallTotal_FireEngineering": 43000000,
+            "CombinedTotal_AllCompanies": 538300000
+          }
+        ]
+      }
+    ]
+  }

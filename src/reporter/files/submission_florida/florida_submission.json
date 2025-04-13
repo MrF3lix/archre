@@ -1,0 +1,1374 @@
+{
+    "title": "Exposure Comparison",
+    "metadata": {
+      "Exposure View 1": "Cedant XYZ - February 23, 2024",
+      "Exposure View 2": "Cedant XYZ - January 15, 2023",
+      "Peril": "Wind",
+      "Details": "Comparison across various metrics including modeled output, line of business, data quality, limits, and geography.",
+      "Currency": "USD"
+    },
+    "tables": [
+      {
+        "id": "modeled_output_model1_no_surge",
+        "description": "Model 1 Long Term without Demand Surge Comparison (model_a)",
+        "footnotes": [
+          "US $ in Millions"
+        ],
+        "data": [
+          {
+            "Return Period": "250 yr",
+            "Value_2024": 741,
+            "Value_2023": 480,
+            "Value_%_Change": 0.545
+          },
+          {
+            "Return Period": "200 yr",
+            "Value_2024": 659,
+            "Value_2023": 427,
+            "Value_%_Change": 0.544
+          },
+          {
+            "Return Period": "130 yr",
+            "Value_2024": 527,
+            "Value_2023": 342,
+            "Value_%_Change": 0.543
+          },
+          {
+            "Return Period": "100 yr",
+            "Value_2024": 459,
+            "Value_2023": 298,
+            "Value_%_Change": 0.541
+          },
+          {
+            "Return Period": "80 yr",
+            "Value_2024": 406,
+            "Value_2023": 264,
+            "Value_%_Change": 0.539
+          },
+          {
+            "Return Period": "70 yr",
+            "Value_2024": 377,
+            "Value_2023": 245,
+            "Value_%_Change": 0.539
+          },
+          {
+            "Return Period": "60 yr",
+            "Value_2024": 346,
+            "Value_2023": 225,
+            "Value_%_Change": 0.538
+          },
+          {
+            "Return Period": "50 yr",
+            "Value_2024": 311,
+            "Value_2023": 202,
+            "Value_%_Change": 0.537
+          },
+          {
+            "Return Period": "25 yr",
+            "Value_2024": 197,
+            "Value_2023": 129,
+            "Value_%_Change": 0.526
+          },
+          {
+            "Return Period": "20 yr",
+            "Value_2024": 165,
+            "Value_2023": 108,
+            "Value_%_Change": 0.520
+          },
+          {
+            "Return Period": "5 yr",
+            "Value_2024": 23,
+            "Value_2023": 15,
+            "Value_%_Change": 0.477
+          },
+          {
+            "Return Period": "Blended 100-20",
+            "Value_2024": 312,
+            "Value_2023": 203,
+            "Value_%_Change": 0.535
+          },
+          {
+            "Return Period": "Annual avg",
+            "Value_2024": 33,
+            "Value_2023": 22,
+            "Value_%_Change": 0.521
+          },
+          {
+            "Return Period": "Std dev",
+            "Value_2024": 136,
+            "Value_2023": 88,
+            "Value_%_Change": 0.550
+          },
+          {
+            "Return Period": "IIF",
+            "Value_2024": 68449,
+            "Value_2023": 42954,
+            "Value_%_Change": 0.594
+          },
+          {
+            "Return Period": "Count (ones)",
+            "Value_2024": 125899,
+            "Value_2023": 86307,
+            "Value_%_Change": 0.459
+          }
+        ]
+      },
+      {
+        "id": "modeled_output_model2_no_surge",
+        "description": "Model 2 Long Term without Demand Surge Comparison (model_b)",
+        "footnotes": [
+          "US $ in Millions"
+        ],
+        "data": [
+          {
+            "Return Period": "250 yr",
+            "Value_2024": 1023,
+            "Value_2023": 697,
+            "Value_%_Change": 0.467
+          },
+          {
+            "Return Period": "200 yr",
+            "Value_2024": 884,
+            "Value_2023": 600,
+            "Value_%_Change": 0.475
+          },
+          {
+            "Return Period": "130 yr",
+            "Value_2024": 674,
+            "Value_2023": 457,
+            "Value_%_Change": 0.475
+          },
+          {
+            "Return Period": "100 yr",
+            "Value_2024": 551,
+            "Value_2023": 388,
+            "Value_%_Change": 0.419
+          },
+          {
+            "Return Period": "80 yr",
+            "Value_2024": 494,
+            "Value_2023": 335,
+            "Value_%_Change": 0.472
+          },
+          {
+            "Return Period": "70 yr",
+            "Value_2024": 460,
+            "Value_2023": 321,
+            "Value_%_Change": 0.435
+          },
+          {
+            "Return Period": "60 yr",
+            "Value_2024": 429,
+            "Value_2023": 296,
+            "Value_%_Change": 0.461
+          },
+          {
+            "Return Period": "50 yr",
+            "Value_2024": 380,
+            "Value_2023": 260,
+            "Value_%_Change": 0.449
+          },
+          {
+            "Return Period": "25 yr",
+            "Value_2024": 229,
+            "Value_2023": 152,
+            "Value_%_Change": 0.503
+          },
+          {
+            "Return Period": "20 yr",
+            "Value_2024": 198,
+            "Value_2023": 131,
+            "Value_%_Change": 0.507
+          },
+          {
+            "Return Period": "5 yr",
+            "Value_2024": 45,
+            "Value_2023": 30,
+            "Value_%_Change": 0.513
+          },
+          {
+            "Return Period": "Blended 100-20",
+            "Value_2024": 374,
+            "Value_2023": 260,
+            "Value_%_Change": 0.441
+          },
+          {
+            "Return Period": "Annual avg",
+            "Value_2024": 47,
+            "Value_2023": 31,
+            "Value_%_Change": 0.483
+          },
+          {
+            "Return Period": "Std dev",
+            "Value_2024": 149,
+            "Value_2023": 100,
+            "Value_%_Change": 0.486
+          },
+          {
+            "Return Period": "IIF",
+            "Value_2024": 68449,
+            "Value_2023": 42954,
+            "Value_%_Change": 0.594
+          },
+          {
+            "Return Period": "Count (ones)",
+            "Value_2024": 125899,
+            "Value_2023": 86307,
+            "Value_%_Change": 0.459
+          }
+        ]
+      },
+      {
+        "id": "modeled_output_model1_with_surge",
+        "description": "Model 1 Long Term with Demand Surge Comparison (model_a)",
+        "footnotes": [
+          "US $ in Millions"
+        ],
+        "data": [
+          {
+            "Return Period": "250 yr",
+            "Value_2024": 1001,
+            "Value_2023": 643,
+            "Value_%_Change": 0.558
+          },
+          {
+            "Return Period": "200 yr",
+            "Value_2024": 876,
+            "Value_2023": 563,
+            "Value_%_Change": 0.554
+          },
+          {
+            "Return Period": "130 yr",
+            "Value_2024": 681,
+            "Value_2023": 438,
+            "Value_%_Change": 0.552
+          },
+          {
+            "Return Period": "100 yr",
+            "Value_2024": 580,
+            "Value_2023": 375,
+            "Value_%_Change": 0.550
+          },
+          {
+            "Return Period": "80 yr",
+            "Value_2024": 506,
+            "Value_2023": 327,
+            "Value_%_Change": 0.548
+          },
+          {
+            "Return Period": "70 yr",
+            "Value_2024": 466,
+            "Value_2023": 301,
+            "Value_%_Change": 0.547
+          },
+          {
+            "Return Period": "60 yr",
+            "Value_2024": 422,
+            "Value_2023": 273,
+            "Value_%_Change": 0.546
+          },
+          {
+            "Return Period": "50 yr",
+            "Value_2024": 374,
+            "Value_2023": 242,
+            "Value_%_Change": 0.545
+          },
+          {
+            "Return Period": "25 yr",
+            "Value_2024": 224,
+            "Value_2023": 146,
+            "Value_%_Change": 0.533
+          },
+          {
+            "Return Period": "20 yr",
+            "Value_2024": 184,
+            "Value_2023": 121,
+            "Value_%_Change": 0.526
+          },
+          {
+            "Return Period": "5 yr",
+            "Value_2024": 23,
+            "Value_2023": 16,
+            "Value_%_Change": 0.476
+          },
+          {
+            "Return Period": "Blended 100-20",
+            "Value_2024": 383,
+            "Value_2023": 248,
+            "Value_%_Change": 0.544
+          },
+          {
+            "Return Period": "Annual avg",
+            "Value_2024": 40,
+            "Value_2023": 26,
+            "Value_%_Change": 0.531
+          },
+          {
+            "Return Period": "Std dev",
+            "Value_2024": 192,
+            "Value_2023": 123,
+            "Value_%_Change": 0.569
+          },
+          {
+            "Return Period": "IIF",
+            "Value_2024": 68449,
+            "Value_2023": 42954,
+            "Value_%_Change": 0.594
+          },
+          {
+            "Return Period": "Count (ones)",
+            "Value_2024": 125899,
+            "Value_2023": 86307,
+            "Value_%_Change": 0.459
+          }
+        ]
+      },
+      {
+        "id": "modeled_output_model2_with_surge",
+        "description": "Model 2 Long Term with Demand Surge Comparison (model_b)",
+        "footnotes": [
+          "US $ in Millions"
+        ],
+        "data": [
+          {
+            "Return Period": "250 yr",
+            "Value_2024": 1315,
+            "Value_2023": 903,
+            "Value_%_Change": 0.463
+          },
+          {
+            "Return Period": "200 yr",
+            "Value_2024": 1135,
+            "Value_2023": 776,
+            "Value_%_Change": 0.463
+          },
+          {
+            "Return Period": "130 yr",
+            "Value_2024": 864,
+            "Value_2023": 576,
+            "Value_%_Change": 0.428
+          },
+          {
+            "Return Period": "100 yr",
+            "Value_2024": 695,
+            "Value_2023": 486,
+            "Value_%_Change": 0.500
+          },
+          {
+            "Return Period": "80 yr",
+            "Value_2024": 628,
+            "Value_2023": 426,
+            "Value_%_Change": 0.474
+          },
+          {
+            "Return Period": "70 yr",
+            "Value_2024": 582,
+            "Value_2023": 399,
+            "Value_%_Change": 0.458
+          },
+          {
+            "Return Period": "60 yr",
+            "Value_2024": 537,
+            "Value_2023": 366,
+            "Value_%_Change": 0.465
+          },
+          {
+            "Return Period": "50 yr",
+            "Value_2024": 465,
+            "Value_2023": 320,
+            "Value_%_Change": 0.452
+          },
+          {
+            "Return Period": "25 yr",
+            "Value_2024": 268,
+            "Value_2023": 180,
+            "Value_%_Change": 0.487
+          },
+          {
+            "Return Period": "20 yr",
+            "Value_2024": 224,
+            "Value_2023": 149,
+            "Value_%_Change": 0.504
+          },
+          {
+            "Return Period": "5 yr",
+            "Value_2024": 46,
+            "Value_2023": 30,
+            "Value_%_Change": 0.512
+          },
+          {
+            "Return Period": "Blended 100-20",
+            "Value_2024": 459,
+            "Value_2023": 318,
+            "Value_%_Change": 0.446
+          },
+          {
+            "Return Period": "Annual avg",
+            "Value_2024": 53,
+            "Value_2023": 36,
+            "Value_%_Change": 0.484
+          },
+          {
+            "Return Period": "Std dev",
+            "Value_2024": 183,
+            "Value_2023": 123,
+            "Value_%_Change": 0.492
+          },
+          {
+            "Return Period": "IIF",
+            "Value_2024": 68449,
+            "Value_2023": 42954,
+            "Value_%_Change": 0.594
+          },
+          {
+            "Return Period": "Count (ones)",
+            "Value_2024": 125899,
+            "Value_2023": 86307,
+            "Value_%_Change": 0.459
+          }
+        ]
+      },
+      {
+        "id": "line_of_business_profile",
+        "description": "Line of Business Profile Comparison",
+        "footnotes": [
+          "US $ in Millions, Risk Count in Ones",
+          "* TIV values throughout Section 2.B do not include coverage B"
+        ],
+        "data": [
+          {
+            "Form": "DP3",
+            "Risk Count_2024": 1727,
+            "Cov A_2024": 890,
+            "Cov C_2024": 219,
+            "Cov D_2024": 89,
+            "TIV_2024": 1198,
+            "Risk Count_2023": 0,
+            "Cov A_2023": 0,
+            "Cov C_2023": 0,
+            "Cov D_2023": 0,
+            "TIV_2023": 0,
+            "Risk Count % Change": null,
+            "TIV % Change": null
+          },
+          {
+            "Form": "HO3",
+            "Risk Count_2024": 147035,
+            "Cov A_2024": 63662,
+            "Cov C_2024": 20732,
+            "Cov D_2024": 6362,
+            "TIV_2024": 90756,
+            "Risk Count_2023": 97461,
+            "Cov A_2023": 39640,
+            "Cov C_2023": 13496,
+            "Cov D_2023": 3960,
+            "TIV_2023": 57096,
+            "Risk Count % Change": 0.509,
+            "TIV % Change": 0.590
+          },
+          {
+            "Form": "HO4",
+            "Risk Count_2024": 623,
+            "Cov A_2024": 0,
+            "Cov C_2024": 25,
+            "Cov D_2024": 3,
+            "TIV_2024": 28,
+            "Risk Count_2023": 681,
+            "Cov A_2023": 0,
+            "Cov C_2023": 29,
+            "Cov D_2023": 3,
+            "TIV_2023": 31,
+            "Risk Count % Change": -0.085,
+            "TIV % Change": -0.114
+          },
+          {
+            "Form": "HO6",
+            "Risk Count_2024": 26873,
+            "Cov A_2024": 2444,
+            "Cov C_2024": 1169,
+            "Cov D_2024": 234,
+            "TIV_2024": 3847,
+            "Risk Count_2023": 22688,
+            "Cov A_2023": 1862,
+            "Cov C_2023": 954,
+            "Cov D_2023": 191,
+            "TIV_2023": 3007,
+            "Risk Count % Change": 0.184,
+            "TIV % Change": 0.279
+          },
+          {
+            "Form": "Total",
+            "Risk Count_2024": 176258,
+            "Cov A_2024": 66996,
+            "Cov C_2024": 22145,
+            "Cov D_2024": 6688,
+            "TIV_2024": 95829,
+            "Risk Count_2023": 120830,
+            "Cov A_2023": 41502,
+            "Cov C_2023": 14479,
+            "Cov D_2023": 4154,
+            "TIV_2023": 60135,
+            "Risk Count % Change": 0.459,
+            "TIV % Change": 0.594
+          }
+        ]
+      },
+      {
+        "id": "data_quality_wind",
+        "description": "Data Quality for Wind Exposures Comparison",
+        "footnotes": [
+          "US $ in Millions, Risk Count in Ones",
+          "* TIV values throughout Section 2.B do not include coverage B"
+        ],
+        "data": [
+          {
+            "Address Resolution": "Street Level",
+            "Risk Count_2024": 122638,
+            "TIV_2024": 66571,
+            "% Total_2024": 0.973,
+            "Risk Count_2023": 84509,
+            "TIV_2023": 42025,
+            "% Total_2023": 0.978,
+            "Risk Count % Change": 0.451,
+            "TIV % Change": 0.584
+          },
+          {
+            "Address Resolution": "Block Group/Census Tract",
+            "Risk Count_2024": 1578,
+            "TIV_2024": 873,
+            "% Total_2024": 0.013,
+            "Risk Count_2023": 747,
+            "TIV_2023": 356,
+            "% Total_2023": 0.008,
+            "Risk Count % Change": 1.113,
+            "TIV % Change": 1.454
+          },
+          {
+            "Address Resolution": "Zip Level",
+            "Risk Count_2024": 1684,
+            "TIV_2024": 1005,
+            "% Total_2024": 0.015,
+            "Risk Count_2023": 1052,
+            "TIV_2023": 573,
+            "% Total_2023": 0.013,
+            "Risk Count % Change": 0.600,
+            "TIV % Change": 0.754
+          },
+          {
+            "Address Resolution": "City",
+            "Risk Count_2024": 0,
+            "TIV_2024": 0,
+            "% Total_2024": 0.000,
+            "Risk Count_2023": 0,
+            "TIV_2023": 0,
+            "% Total_2023": 0.000,
+            "Risk Count % Change": 0.000,
+            "TIV % Change": 0.000
+          },
+          {
+            "Address Resolution": "Total",
+            "Risk Count_2024": 125899,
+            "TIV_2024": 68449,
+            "% Total_2024": 1.000,
+            "Risk Count_2023": 86307,
+            "TIV_2023": 42954,
+            "% Total_2023": 1.000,
+            "Risk Count % Change": 0.459,
+            "TIV % Change": 0.594
+          }
+        ]
+      },
+      {
+        "id": "limits_profile",
+        "description": "Limits Profile Comparison",
+        "footnotes": [
+          "US $ in Millions, Risk Count in Ones",
+          "* TIV values throughout Section 2.B do not include coverage B"
+        ],
+        "data": [
+          {
+            "Limit Band": "0 - 10,000",
+            "Risk Count_2024": 2,
+            "TIV_2024": 0,
+            "Risk Count_2023": 3,
+            "TIV_2023": 0,
+            "Risk Count % Change": -0.400,
+            "TIV % Change": -0.442
+          },
+          {
+            "Limit Band": "10,001 - 50,000",
+            "Risk Count_2024": 708,
+            "TIV_2024": 22,
+            "Risk Count_2023": 836,
+            "TIV_2023": 26,
+            "Risk Count % Change": -0.154,
+            "TIV % Change": -0.165
+          },
+          {
+            "Limit Band": "50,001 - 100,000",
+            "Risk Count_2024": 6589,
+            "TIV_2024": 543,
+            "Risk Count_2023": 6181,
+            "TIV_2023": 504,
+            "Risk Count % Change": 0.066,
+            "TIV % Change": 0.077
+          },
+          {
+            "Limit Band": "100,001 - 250,000",
+            "Risk Count_2024": 12032,
+            "TIV_2024": 1821,
+            "Risk Count_2023": 10426,
+            "TIV_2023": 1625,
+            "Risk Count % Change": 0.154,
+            "TIV % Change": 0.121
+          },
+          {
+            "Limit Band": "250,001 - 500,000",
+            "Risk Count_2024": 46449,
+            "TIV_2024": 18326,
+            "Risk Count_2023": 33525,
+            "TIV_2023": 12956,
+            "Risk Count % Change": 0.386,
+            "TIV % Change": 0.414
+          },
+          {
+            "Limit Band": "500,001 - 1,000,000",
+            "Risk Count_2024": 50726,
+            "TIV_2024": 33991,
+            "Risk Count_2023": 29616,
+            "TIV_2023": 19707,
+            "Risk Count % Change": 0.713,
+            "TIV % Change": 0.725
+          },
+          {
+            "Limit Band": "1,000,001 - 2,000,000",
+            "Risk Count_2024": 8215,
+            "TIV_2024": 10710,
+            "Risk Count_2023": 5166,
+            "TIV_2023": 6733,
+            "Risk Count % Change": 0.590,
+            "TIV % Change": 0.591
+          },
+          {
+            "Limit Band": "2,000,001 - 3,000,000",
+            "Risk Count_2024": 973,
+            "TIV_2024": 2281,
+            "Risk Count_2023": 475,
+            "TIV_2023": 1103,
+            "Risk Count % Change": 1.048,
+            "TIV % Change": 1.068
+          },
+          {
+            "Limit Band": "3,000,001 - 4,000,000",
+            "Risk Count_2024": 153,
+            "TIV_2024": 519,
+            "Risk Count_2023": 60,
+            "TIV_2023": 203,
+            "Risk Count % Change": 1.563,
+            "TIV % Change": 1.557
+          },
+          {
+            "Limit Band": "4,000,001 - 5,000,000",
+            "Risk Count_2024": 53,
+            "TIV_2024": 235,
+            "Risk Count_2023": 22,
+            "TIV_2023": 96,
+            "Risk Count % Change": 1.409,
+            "TIV % Change": 1.440
+          },
+          {
+            "Limit Band": "5,000,001 - 6,000,000",
+            "Risk Count_2024": 1,
+            "TIV_2024": 3,
+            "Risk Count_2023": 0,
+            "TIV_2023": 0,
+            "Risk Count % Change": null,
+            "TIV % Change": null
+          },
+          {
+            "Limit Band": "All Limit Bands",
+            "Risk Count_2024": 125899,
+            "TIV_2024": 68449,
+            "Risk Count_2023": 86307,
+            "TIV_2023": 42954,
+            "Risk Count % Change": 0.459,
+            "TIV % Change": 0.594
+          }
+        ]
+      },
+      {
+        "id": "wind_exposure_by_county",
+        "description": "Wind Exposure by County Comparison (Top 20 by 2024 TIV)",
+        "footnotes": [
+          "US $ in Millions, Risk Count in Ones",
+          "* TIV values throughout Section 2.B do not include coverage B"
+        ],
+        "data": [
+          {
+            "County": "PALM BEACH COUNTY",
+            "Risk Count_2024": 15152,
+            "TIV_2024": 9174,
+            "Risk Count_2023": 10411,
+            "TIV_2023": 5809,
+            "Risk Count % Change": 0.455,
+            "TIV % Change": 0.579
+          },
+          {
+            "County": "BROWARD COUNTY",
+            "Risk Count_2024": 14037,
+            "TIV_2024": 8702,
+            "Risk Count_2023": 9065,
+            "TIV_2023": 5311,
+            "Risk Count % Change": 0.548,
+            "TIV % Change": 0.639
+          },
+          {
+            "County": "MIAMI-DADE COUNTY",
+            "Risk Count_2024": 14990,
+            "TIV_2024": 7298,
+            "Risk Count_2023": 9247,
+            "TIV_2023": 4273,
+            "Risk Count % Change": 0.621,
+            "TIV % Change": 0.708
+          },
+          {
+            "County": "HILLSBOROUGH COUNTY",
+            "Risk Count_2024": 8473,
+            "TIV_2024": 4868,
+            "Risk Count_2023": 4730,
+            "TIV_2023": 2492,
+            "Risk Count % Change": 0.791,
+            "TIV % Change": 0.954
+          },
+          {
+            "County": "PINELLAS COUNTY",
+            "Risk Count_2024": 8906,
+            "TIV_2024": 4282,
+            "Risk Count_2023": 7021,
+            "TIV_2023": 2930,
+            "Risk Count % Change": 0.268,
+            "TIV % Change": 0.462
+          },
+          {
+            "County": "COLLIER COUNTY",
+            "Risk Count_2024": 6477,
+            "TIV_2024": 3660,
+            "Risk Count_2023": 4904,
+            "TIV_2023": 2616,
+            "Risk Count % Change": 0.321,
+            "TIV % Change": 0.399
+          },
+          {
+            "County": "LEE COUNTY",
+            "Risk Count_2024": 6038,
+            "TIV_2024": 3389,
+            "Risk Count_2023": 6594,
+            "TIV_2023": 3272,
+            "Risk Count % Change": -0.084,
+            "TIV % Change": 0.036
+          },
+          {
+            "County": "ORANGE COUNTY",
+            "Risk Count_2024": 4145,
+            "TIV_2024": 2240,
+            "Risk Count_2023": 2124,
+            "TIV_2023": 1027,
+            "Risk Count % Change": 0.951,
+            "TIV % Change": 1.181
+          },
+          {
+            "County": "ST. LUCIE COUNTY",
+            "Risk Count_2024": 4476,
+            "TIV_2024": 2127,
+            "Risk Count_2023": 2902,
+            "TIV_2023": 1262,
+            "Risk Count % Change": 0.542,
+            "TIV % Change": 0.686
+          },
+          {
+            "County": "DUVAL COUNTY",
+            "Risk Count_2024": 3660,
+            "TIV_2024": 1874,
+            "Risk Count_2023": 1956,
+            "TIV_2023": 965,
+            "Risk Count % Change": 0.871,
+            "TIV % Change": 0.942
+          },
+          {
+            "County": "SARASOTA COUNTY",
+            "Risk Count_2024": 3294,
+            "TIV_2024": 1756,
+            "Risk Count_2023": 2633,
+            "TIV_2023": 1210,
+            "Risk Count % Change": 0.251,
+            "TIV % Change": 0.451
+          },
+          {
+            "County": "BREVARD COUNTY",
+            "Risk Count_2024": 3499,
+            "TIV_2024": 1683,
+            "Risk Count_2023": 3180,
+            "TIV_2023": 1315,
+            "Risk Count % Change": 0.100,
+            "TIV % Change": 0.280
+          },
+          {
+            "County": "MANATEE COUNTY",
+            "Risk Count_2024": 2822,
+            "TIV_2024": 1634,
+            "Risk Count_2023": 1902,
+            "TIV_2023": 940,
+            "Risk Count % Change": 0.484,
+            "TIV % Change": 0.737
+          },
+          {
+            "County": "PASCO COUNTY",
+            "Risk Count_2024": 2931,
+            "TIV_2024": 1518,
+            "Risk Count_2023": 1872,
+            "TIV_2023": 865,
+            "Risk Count % Change": 0.566,
+            "TIV % Change": 0.756
+          },
+          {
+            "County": "VOLUSIA COUNTY",
+            "Risk Count_2024": 2803,
+            "TIV_2024": 1348,
+            "Risk Count_2023": 2035,
+            "TIV_2023": 891,
+            "Risk Count % Change": 0.377,
+            "TIV % Change": 0.513
+          },
+          {
+            "County": "ESCAMBIA COUNTY",
+            "Risk Count_2024": 2265,
+            "TIV_2024": 1129,
+            "Risk Count_2023": 1715,
+            "TIV_2023": 799,
+            "Risk Count % Change": 0.321,
+            "TIV % Change": 0.413
+          },
+          {
+            "County": "MARTIN COUNTY",
+            "Risk Count_2024": 1939,
+            "TIV_2024": 1108,
+            "Risk Count_2023": 1237,
+            "TIV_2023": 665,
+            "Risk Count % Change": 0.568,
+            "TIV % Change": 0.666
+          },
+          {
+            "County": "BAY COUNTY",
+            "Risk Count_2024": 2162,
+            "TIV_2024": 1042,
+            "Risk Count_2023": 1729,
+            "TIV_2023": 793,
+            "Risk Count % Change": 0.250,
+            "TIV % Change": 0.313
+          },
+          {
+            "County": "ST. JOHNS COUNTY",
+            "Risk Count_2024": 1446,
+            "TIV_2024": 1007,
+            "Risk Count_2023": 872,
+            "TIV_2023": 586,
+            "Risk Count % Change": 0.658,
+            "TIV % Change": 0.720
+          },
+          {
+            "County": "POLK COUNTY",
+            "Risk Count_2024": 1859,
+            "TIV_2024": 901,
+            "Risk Count_2023": 936,
+            "TIV_2023": 430,
+            "Risk Count % Change": 0.987,
+            "TIV % Change": 1.095
+          },
+          {
+            "County": "Top 20 Subtotal",
+            "Risk Count_2024": 111369,
+            "TIV_2024": 60741,
+            "Risk Count_2023": 77062,
+            "TIV_2023": 38451,
+            "Risk Count % Change": 0.445,
+            "TIV % Change": 0.580
+          },
+          {
+            "County": "Grand Total",
+            "Risk Count_2024": 251797,
+            "TIV_2024": 136898,
+            "Risk Count_2023": 172614,
+            "TIV_2023": 85907,
+            "Risk Count % Change": 0.459,
+            "TIV % Change": 0.594
+          }
+        ]
+      },
+      {
+        "id": "wind_exposure_maps",
+        "description": "TIV by County Comparison Maps",
+        "footnotes": [
+          "Visual representation of TIV distribution across Florida counties for Feb 23, 2024 and Jan 15, 2023."
+        ],
+        "data": [
+          {
+            "Map Date": "February 23, 2024",
+            "Legend (TIV in $ Millions)": [
+              "Below 10",
+              "10 to 50",
+              "50 to 100",
+              "100 to 250",
+              "250 to 500",
+              "500 to 1,000",
+              "1,000 to 2,000",
+              "2,000 to 3,000",
+              "Above 5,000"
+            ]
+          },
+          {
+            "Map Date": "January 15, 2023",
+            "Legend (TIV in $ Millions)": [
+              "Below 10",
+              "10 to 50",
+              "50 to 100",
+              "100 to 250",
+              "250 to 500",
+              "500 to 1,000",
+              "1,000 to 2,000",
+              "2,000 to 3,000",
+              "Above 5,000"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "renewal_policy_tiv_comparison",
+        "description": "Renewal Policy TIV Comparison by County",
+        "footnotes": [
+          "Units for TIV are not specified on the image but may differ from other tables. The '[2] to [1]' column represents a specific metric shown as a percentage."
+        ],
+        "data": [
+          {
+            "County": "Alachua",
+            "TIV_2024": 50,
+            "TIV_2023": 46,
+            "Metric_[2]_to_[1]_Percent": 0.0978
+          },
+          {
+            "County": "Baker",
+            "TIV_2024": 650,
+            "TIV_2023": 605,
+            "Metric_[2]_to_[1]_Percent": 0.0738
+          },
+          {
+            "County": "Bay",
+            "TIV_2024": 5,
+            "TIV_2023": 4,
+            "Metric_[2]_to_[1]_Percent": 0.0955
+          },
+          {
+            "County": "Bradford",
+            "TIV_2024": 1024,
+            "TIV_2023": 932,
+            "Metric_[2]_to_[1]_Percent": 0.0990
+          },
+          {
+            "County": "Brevard",
+            "TIV_2024": 4534,
+            "TIV_2023": 4101,
+            "Metric_[2]_to_[1]_Percent": 0.1055
+          },
+          {
+            "County": "Broward",
+            "TIV_2024": 2,
+            "TIV_2023": 2,
+            "Metric_[2]_to_[1]_Percent": 0.0667
+          },
+          {
+            "County": "Calhoun",
+            "TIV_2024": 453,
+            "TIV_2023": 400,
+            "Metric_[2]_to_[1]_Percent": 0.1317
+          },
+          {
+            "County": "Charlotte",
+            "TIV_2024": 29,
+            "TIV_2023": 26,
+            "Metric_[2]_to_[1]_Percent": 0.0935
+          },
+          {
+            "County": "Citrus",
+            "TIV_2024": 74,
+            "TIV_2023": 67,
+            "Metric_[2]_to_[1]_Percent": 0.0951
+          },
+          {
+            "County": "Clay",
+            "TIV_2024": 2155,
+            "TIV_2023": 1974,
+            "Metric_[2]_to_[1]_Percent": 0.0915
+          },
+          {
+            "County": "Collier",
+            "TIV_2024": 3,
+            "TIV_2023": 3,
+            "Metric_[2]_to_[1]_Percent": 0.1070
+          },
+          {
+            "County": "Columbia",
+            "TIV_2024": 74,
+            "TIV_2023": 67,
+            "Metric_[2]_to_[1]_Percent": 0.1121
+          },
+          {
+            "County": "Desoto",
+            "TIV_2024": 8,
+            "TIV_2023": 7,
+            "Metric_[2]_to_[1]_Percent": 0.0975
+          },
+          {
+            "County": "Dixie",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.1271
+          },
+          {
+            "County": "Duval",
+            "TIV_2024": 772,
+            "TIV_2023": 708,
+            "Metric_[2]_to_[1]_Percent": 0.0894
+          },
+          {
+            "County": "Escambia",
+            "TIV_2024": 644,
+            "TIV_2023": 593,
+            "Metric_[2]_to_[1]_Percent": 0.0808
+          },
+          {
+            "County": "Flagler",
+            "TIV_2024": 174,
+            "TIV_2023": 157,
+            "Metric_[2]_to_[1]_Percent": 0.1100
+          },
+          {
+            "County": "Franklin",
+            "TIV_2024": 22,
+            "TIV_2023": 20,
+            "Metric_[2]_to_[1]_Percent": 0.0968
+          },
+          {
+            "County": "Gadsden",
+            "TIV_2024": 12,
+            "TIV_2023": 11,
+            "Metric_[2]_to_[1]_Percent": 0.0976
+          },
+          {
+            "County": "Gilchrist",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.0862
+          },
+          {
+            "County": "Glades",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.1032
+          },
+          {
+            "County": "Gulf",
+            "TIV_2024": 27,
+            "TIV_2023": 25,
+            "Metric_[2]_to_[1]_Percent": 0.0752
+          },
+          {
+            "County": "Hamilton",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.1225
+          },
+          {
+            "County": "Hardee",
+            "TIV_2024": 8,
+            "TIV_2023": 7,
+            "Metric_[2]_to_[1]_Percent": 0.1008
+          },
+          {
+            "County": "Hendry",
+            "TIV_2024": 132,
+            "TIV_2023": 120,
+            "Metric_[2]_to_[1]_Percent": 0.0968
+          },
+          {
+            "County": "Hernando",
+            "TIV_2024": 17,
+            "TIV_2023": 16,
+            "Metric_[2]_to_[1]_Percent": 0.0963
+          },
+          {
+            "County": "Highlands",
+            "TIV_2024": 2055,
+            "TIV_2023": 1845,
+            "Metric_[2]_to_[1]_Percent": 0.1134
+          },
+          {
+            "County": "Hillsborough",
+            "TIV_2024": 2,
+            "TIV_2023": 2,
+            "Metric_[2]_to_[1]_Percent": 0.0871
+          },
+          {
+            "County": "Holmes",
+            "TIV_2024": 437,
+            "TIV_2023": 397,
+            "Metric_[2]_to_[1]_Percent": 0.1000
+          },
+          {
+            "County": "Indian River",
+            "TIV_2024": 14,
+            "TIV_2023": 13,
+            "Metric_[2]_to_[1]_Percent": 0.0911
+          },
+          {
+            "County": "Jackson",
+            "TIV_2024": 2,
+            "TIV_2023": 2,
+            "Metric_[2]_to_[1]_Percent": 0.1225
+          },
+          {
+            "County": "Jefferson",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.1021
+          },
+          {
+            "County": "Lafayette",
+            "TIV_2024": 67,
+            "TIV_2023": 59,
+            "Metric_[2]_to_[1]_Percent": 0.1224
+          },
+          {
+            "County": "Lake",
+            "TIV_2024": 2881,
+            "TIV_2023": 2556,
+            "Metric_[2]_to_[1]_Percent": 0.1262
+          },
+          {
+            "County": "Lee",
+            "TIV_2024": 104,
+            "TIV_2023": 98,
+            "Metric_[2]_to_[1]_Percent": 0.0640
+          },
+          {
+            "County": "Leon",
+            "TIV_2024": 2,
+            "TIV_2023": 2,
+            "Metric_[2]_to_[1]_Percent": 0.1203
+          },
+          {
+            "County": "Levy",
+            "TIV_2024": 1,
+            "TIV_2023": 0,
+            "Metric_[2]_to_[1]_Percent": 0.1203
+          },
+          {
+            "County": "Liberty",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.0903
+          },
+          {
+            "County": "Madison",
+            "TIV_2024": 769,
+            "TIV_2023": 694,
+            "Metric_[2]_to_[1]_Percent": 0.1090
+          },
+          {
+            "County": "Manatee",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.1120
+          },
+          {
+            "County": "Marion",
+            "TIV_2024": 495,
+            "TIV_2023": 445,
+            "Metric_[2]_to_[1]_Percent": 0.1118
+          },
+          {
+            "County": "Martin",
+            "TIV_2024": 3465,
+            "TIV_2023": 3157,
+            "Metric_[2]_to_[1]_Percent": 0.0975
+          },
+          {
+            "County": "Miami-Dade",
+            "TIV_2024": 55,
+            "TIV_2023": 45,
+            "Metric_[2]_to_[1]_Percent": 0.0803
+          },
+          {
+            "County": "Monroe",
+            "TIV_2024": 333,
+            "TIV_2023": 307,
+            "Metric_[2]_to_[1]_Percent": 0.0853
+          },
+          {
+            "County": "Nassau",
+            "TIV_2024": 9,
+            "TIV_2023": 8,
+            "Metric_[2]_to_[1]_Percent": 0.1105
+          },
+          {
+            "County": "Okaloosa",
+            "TIV_2024": 744,
+            "TIV_2023": 679,
+            "Metric_[2]_to_[1]_Percent": 0.0958
+          },
+          {
+            "County": "Okeechobee",
+            "TIV_2024": 148,
+            "TIV_2023": 136,
+            "Metric_[2]_to_[1]_Percent": 0.0920
+          },
+          {
+            "County": "Orange",
+            "TIV_2024": 4725,
+            "TIV_2023": 4308,
+            "Metric_[2]_to_[1]_Percent": 0.0967
+          },
+          {
+            "County": "Osceola",
+            "TIV_2024": 666,
+            "TIV_2023": 596,
+            "Metric_[2]_to_[1]_Percent": 0.1181
+          },
+          {
+            "County": "Palm Beach",
+            "TIV_2024": 2398,
+            "TIV_2023": 2190,
+            "Metric_[2]_to_[1]_Percent": 0.0948
+          },
+          {
+            "County": "Pasco",
+            "TIV_2024": 314,
+            "TIV_2023": 290,
+            "Metric_[2]_to_[1]_Percent": 0.0837
+          },
+          {
+            "County": "Pinellas",
+            "TIV_2024": 4,
+            "TIV_2023": 4,
+            "Metric_[2]_to_[1]_Percent": 0.0863
+          },
+          {
+            "County": "Polk",
+            "TIV_2024": 455,
+            "TIV_2023": 417,
+            "Metric_[2]_to_[1]_Percent": 0.0898
+          },
+          {
+            "County": "Putnam",
+            "TIV_2024": 1055,
+            "TIV_2023": 957,
+            "Metric_[2]_to_[1]_Percent": 0.1021
+          },
+          {
+            "County": "Santa Rosa",
+            "TIV_2024": 371,
+            "TIV_2023": 339,
+            "Metric_[2]_to_[1]_Percent": 0.0953
+          },
+          {
+            "County": "Sarasota",
+            "TIV_2024": 960,
+            "TIV_2023": 872,
+            "Metric_[2]_to_[1]_Percent": 0.1014
+          },
+          {
+            "County": "Seminole",
+            "TIV_2024": 38,
+            "TIV_2023": 31,
+            "Metric_[2]_to_[1]_Percent": 0.0899
+          },
+          {
+            "County": "St. Johns",
+            "TIV_2024": 1,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.0989
+          },
+          {
+            "County": "St. Lucie",
+            "TIV_2024": 2,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.1036
+          },
+          {
+            "County": "Sumter",
+            "TIV_2024": 2,
+            "TIV_2023": 1,
+            "Metric_[2]_to_[1]_Percent": 0.0889
+          },
+          {
+            "County": "Suwannee",
+            "TIV_2024": 718,
+            "TIV_2023": 647,
+            "Metric_[2]_to_[1]_Percent": 0.1092
+          },
+          {
+            "County": "Taylor",
+            "TIV_2024": 14,
+            "TIV_2023": 13,
+            "Metric_[2]_to_[1]_Percent": 0.1042
+          },
+          {
+            "County": "Union",
+            "TIV_2024": 183,
+            "TIV_2023": 166,
+            "Metric_[2]_to_[1]_Percent": 0.1037
+          },
+          {
+            "County": "Volusia",
+            "TIV_2024": 19,
+            "TIV_2023": 17,
+            "Metric_[2]_to_[1]_Percent": 0.1131
+          },
+          {
+            "County": "Wakulla",
+            "TIV_2024": 7999,
+            "TIV_2023": 7258,
+            "Metric_[2]_to_[1]_Percent": 0.1021
+          },
+          {
+            "County": "Walton",
+            "TIV_2024": 127371,
+            "TIV_2023": 115586,
+            "Metric_[2]_to_[1]_Percent": 0.1019
+          },
+          {
+            "County": "Washington",
+            "TIV_2024": 344876,
+            "TIV_2023": 312277,
+            "Metric_[2]_to_[1]_Percent": 0.1042
+          },
+          {
+            "County": "Bi County",
+            "TIV_2024": 7999,
+            "TIV_2023": 7258,
+            "Metric_[2]_to_[1]_Percent": 0.1021
+          },
+          {
+            "County": "Tri County",
+            "TIV_2024": 127371,
+            "TIV_2023": 115586,
+            "Metric_[2]_to_[1]_Percent": 0.1019
+          },
+          {
+            "County": "Total",
+            "TIV_2024": 344876,
+            "TIV_2023": 312277,
+            "Metric_[2]_to_[1]_Percent": 0.1042
+          }
+        ]
+      }
+    ]
+  }

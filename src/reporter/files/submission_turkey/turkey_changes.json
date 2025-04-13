@@ -1,0 +1,38 @@
+{
+    "significant_changes": [
+      "The contract period changed from 2023-2024 to 2024-2025.",
+      "The Layer 1 limit increased from TRY 7,500,000,000 to TRY 10,000,000,000.",
+      "The Layer 1 excess increased from TRY 20,000,000,000 to TRY 35,000,000,000.",
+      "The Layer 2 limit increased from TRY 12,500,000,000 to TRY 25,000,000,000.",
+      "The Layer 2 excess increased from TRY 27,500,000,000 to TRY 45,000,000,000.",
+      "The Layer 3 limit increased from TRY 20,000,000,000 to TRY 45,000,000,000.",
+      "The Layer 3 excess increased from TRY 40,000,000,000 to TRY 70,000,000,000.",
+      "The Limit in All for Layer 2 decreased from TRY 25,000,000,000 to TRY 20,000,000,000.",
+      "The Limit in All for Layer 3 increased from TRY 40,000,000,000 to TRY 50,000,000,000.",
+      "The Limit in All for Layer 4 increased from TRY 40,000,000,000 to TRY 90,000,000,000.",
+      "Layer 1 Minimum and Deposit Premium increased from TRY 677,367,258 to TRY 1,151,125,688.",
+      "Layer 2 Minimum and Deposit Premium increased from TRY 812,788,085 to TRY 2,027,644,171.",
+      "Layer 3 Minimum and Deposit Premium increased from TRY 895,847,363 to TRY 2,237,337,588.",
+      "Premium payment dates changed from 2024 to 2025.",
+      "The premium percentage for Layer 1 decreased from 0.07723% to 0.06313%.",
+      "The premium percentage for Layer 2 increased from 0.09267% to 0.11120%.",
+      "The premium percentage for Layer 3 changed from 0.10214% to 0.12270%.",
+      "Broker ABC & Company Ltd was changed to Broker X.",
+      "The Cash Advance increased from 20% to 50% of the Initial Loss Estimate.",
+      "Local Broker changed from Broker ABC, Turkey to Broker X Company, Ltd Turkey."
+    ],
+    "overall_impression": "The contract appears to be undergoing a renewal with significant adjustments to limits, excesses, premiums, and payment terms. There are also changes to the broker and some modifications to clauses and conditions.",
+    "suggestions_for_investigation": [
+      "Verify the reasons for the changes in limits and excesses for each layer and the overall impact on the risk profile.",
+      "check inflation and if the increase is reasonable and appropriate.",
+      "Confirm the rationale behind the premium adjustments for each layer and assess their financial implications.",
+      "Investigate the reason for the broker change and ensure a smooth transition of responsibilities.",
+      "Clarify the implications of the increased Cash Advance percentage on cash flow and potential claim settlements.",
+      "Review the changes to clauses and conditions to understand any shifts in liability or coverage.",
+      "Determine the impact of the changes to the Limit in All for each layer.",
+      "Confirm the reason for the change in the local broker.",
+      "Verify the accuracy of the updated policy numbers and other identifiers throughout the document.",
+      "Confirm the reason for the change in the definition of the insured scheme from 'Company ABC Scheme' to 'The Company ABC (Company ABC) Scheme, as managed by Company XYZ'.",
+      "Investigate the reason for the removal of Layer 4."
+    ]
+  }

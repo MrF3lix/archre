@@ -1,0 +1,164 @@
+{
+    "document_metadata": {
+      "file_name": "Company ABC Market Presentation - 2024-2025 Renewal vS.pdf",
+      "title": "Company ABC RENEWAL - Turkey 2024-2025",
+      "broker": "Broker ABC",
+      "client": "Company ABC",
+      "period": "2024-2025 Renewal"
+    },
+    "table_of_contents": [
+      "Executive Summary",
+      "Türkiye 2024-2025 Economic Environment and Company ABC Overview",
+      "Exposure",
+      "Modelling",
+      "Claims Performance",
+      "Appendix"
+    ],
+    "sections": [
+      {
+        "section_title": "Executive Summary",
+        "content": [
+          {
+            "type": "key_points",
+            "source": "Company ABC",
+            "points": [
+              "Company ABC operates the Earthquake Scheme, established to cover damages caused by earthquakes to residential properties. This reinsurance contract will continue to provide earthquake only cover for residential properties.",
+              "With the introduction of inflation indexed policies, 2024 has seen a compounded effect of doubling of policy limits and indexation. This in line with forecasts provided at the 2023/4 renewal.",
+              "For 2024/5, this compounding will no longer be present leading to a reduction in the growth of aggregates YoY compared to previous two years.",
+              "Over the course of the existence of the pool the overall reinsurance balance remains positive with nearly 10% payback.",
+              "Following further validation, we have maintained the Revised View of Risk for this year, with the updated higher vulnerability curve and amended hazard module in line with latest scientific research."
+            ]
+          }
+        ]
+      },
+      {
+        "section_title": "Türkiye 2024-2025: Economic Environment and Company ABC Overview",
+        "content": [
+          {
+            "sub_section_title": "Turkish Economy Environment",
+            "type": "text_summary",
+            "points": [
+              "Türkiye's economy has begun to stabilise driven by changes in monetary policy after a period of economic uncertainty.",
+              "Following changes within the Central Bank and Finance ministry in March, Türkiye has begun to take a different economic course.",
+              "Priorities include tightening monetary policy, controlling inflation, and sustaining real term economic growth for TRY stability.",
+              "The disinflation process started in June is projected to continue with a stronger pace.",
+              "In 2024, TRY to EUR exchange rate has largely stabilised (increased by only 3% since March).",
+              "Turkish Central Bank estimates inflation will decrease to ~38% at 2024 year-end, and forecast to fall to 14% for year-end 2025."
+            ],
+            "chart_description": "Chart showing EUR to TRY exchange rate between August 2024-2025 (showing range approx 28-36).",
+            "footnote": "Company ABC's portfolio and reinsurance programme is solely in TRY, unlike other Turkish Broker ABC placements, meaning no currency volatility affects the structure."
+          },
+          {
+            "sub_section_title": "Coverage within Company ABC's reinsurance",
+            "type": "text_summary",
+            "points": [
+              "Company ABC's reinsurance will continue to provide cover for residential properties and EQ only for 2024/25.",
+              "Potential legislative changes (e.g., inclusion of contents and/or additional perils) are uncertain but not covered by the current contract.",
+              "Compulsory Earthquake Insurance (Law no. 6305) covers residential buildings within municipality borders.",
+              "Company ABC indemnifies for material damages caused by earthquakes and directly resulting fires, explosions, tsunami, and landslides within policy limits.",
+              "Covered building parts include: Foundations, Main walls, Common walls, Garden walls, Retaining walls, Ceilings, Basements, Stairs, Elevators, Platforms, Corridors, Roofs, Chimneys, and similar supplementary sections.",
+              "Indemnity amount is determined by dwelling size and style, up to the maximum sum insured."
+            ]
+          },
+          {
+            "sub_section_title": "Stabilisation of policy limits for 2024/25",
+            "type": "text_summary",
+            "points": [
+              "The end of step-change limits and introduction of inflation-adjusted policy limits leads to stabilization.",
+              "Worked Example Logic: Government doubled limits (TRY 640,000 to TRY 1,272,000) from Jan 1, 2024. This doubling, compounded with monthly indexation, caused significant exposure growth in 2023/24 (reaching an estimated TRY 1,760,745 by Dec 2024).",
+              "From 2025 onwards (2024/25 period), the impact is limited to monthly inflation tracking only (estimated limit TRY 2,073,816 by Oct 2025, representing +18% increase from Dec 2024 estimate).",
+              "Turkish Producer Price Index (PPI) is used as the indexation factor.",
+              "Stabilisation in policy limit growth is expected in the following contract period due to the absence of the initial doubling effect."
+            ],
+            "source": "X Inflation Report"
+          }
+        ]
+      },
+      {
+        "section_title": "Exposure",
+        "content": [
+          {
+            "sub_section_title": "Year on Year Exposure change - TRY",
+            "type": "table",
+            "comparison_dates": ["Jun-24", "Jun-23"],
+            "summary": "Exposures tracking policy limit changes and monthly indexing.",
+            "data": [
+              {"Cresta Zone": 1, "policy_count_jun24": 2610150, "sum_insured_try_jun24": 1367134444502, "policy_count_jun23": 2707976, "sum_insured_try_jun23": 657597095672, "policy_count_change_pct": -0.036, "sum_insured_change_pct": 1.079},
+              {"Cresta Zone": 2, "policy_count_jun24": 376747, "sum_insured_try_jun24": 194296280767, "policy_count_jun23": 404524, "sum_insured_try_jun23": 97920036796, "policy_count_change_pct": -0.069, "sum_insured_change_pct": 0.984},
+              {"Cresta Zone": 3, "policy_count_jun24": 603224, "sum_insured_try_jun24": 318354560892, "policy_count_jun23": 625930, "sum_insured_try_jun23": 154149758600, "policy_count_change_pct": -0.036, "sum_insured_change_pct": 1.065},
+              {"Cresta Zone": 4, "policy_count_jun24": 802424, "sum_insured_try_jun24": 415621141125, "policy_count_jun23": 833706, "sum_insured_try_jun23": 197400282932, "policy_count_change_pct": -0.038, "sum_insured_change_pct": 1.105},
+              {"Cresta Zone": 5, "policy_count_jun24": 1134434, "sum_insured_try_jun24": 560272120699, "policy_count_jun23": 1188425, "sum_insured_try_jun23": 272663476036, "policy_count_change_pct": -0.045, "sum_insured_change_pct": 1.055},
+              {"Cresta Zone": 6, "policy_count_jun24": 568619, "sum_insured_try_jun24": 277438422797, "policy_count_jun23": 589286, "sum_insured_try_jun23": 136501902748, "policy_count_change_pct": -0.035, "sum_insured_change_pct": 1.032},
+              {"Cresta Zone": 7, "policy_count_jun24": 632507, "sum_insured_try_jun24": 312180038955, "policy_count_jun23": 640186, "sum_insured_try_jun23": 148156238472, "policy_count_change_pct": -0.012, "sum_insured_change_pct": 1.107},
+              {"Cresta Zone": 8, "policy_count_jun24": 1103628, "sum_insured_try_jun24": 657462231889, "policy_count_jun23": 1086821, "sum_insured_try_jun23": 284678280460, "policy_count_change_pct": 0.015, "sum_insured_change_pct": 1.309},
+              {"Cresta Zone": 9, "policy_count_jun24": 695286, "sum_insured_try_jun24": 405019142371, "policy_count_jun23": 750942, "sum_insured_try_jun23": 210685721028, "policy_count_change_pct": -0.074, "sum_insured_change_pct": 0.922},
+              {"Cresta Zone": 10, "policy_count_jun24": 967089, "sum_insured_try_jun24": 572185864054, "policy_count_jun23": 1025970, "sum_insured_try_jun23": 285391656752, "policy_count_change_pct": -0.057, "sum_insured_change_pct": 1.005},
+              {"Cresta Zone": 11, "policy_count_jun24": 386731, "sum_insured_try_jun24": 194095175476, "policy_count_jun23": 407332, "sum_insured_try_jun23": 97042916348, "policy_count_change_pct": -0.051, "sum_insured_change_pct": 1.000},
+              {"Cresta Zone": 12, "policy_count_jun24": 561500, "sum_insured_try_jun24": 289167359459, "policy_count_jun23": 599650, "sum_insured_try_jun23": 145992234612, "policy_count_change_pct": -0.064, "sum_insured_change_pct": 0.981},
+              {"Cresta Zone": 13, "policy_count_jun24": 136482, "sum_insured_try_jun24": 73709238983, "policy_count_jun23": 146693, "sum_insured_try_jun23": 37785176132, "policy_count_change_pct": -0.070, "sum_insured_change_pct": 0.951},
+              {"Cresta Zone": 14, "policy_count_jun24": 493571, "sum_insured_try_jun24": 339392028554, "policy_count_jun23": 489060, "sum_insured_try_jun23": 148549238712, "policy_count_change_pct": 0.009, "sum_insured_change_pct": 1.285},
+              {"Cresta Zone": 15, "policy_count_jun24": 197358, "sum_insured_try_jun24": 120786001342, "policy_count_jun23": 205023, "sum_insured_try_jun23": 52585074520, "policy_count_change_pct": -0.037, "sum_insured_change_pct": 1.297}
+            ],
+            "total": {"policy_count_jun24": 11269750, "sum_insured_try_jun24": 6097114051865, "policy_count_jun23": 11701524, "sum_insured_try_jun23": 2927099089820, "policy_count_change_pct": -0.0369, "sum_insured_change_pct": 1.0830}
+          },
+          {
+            "sub_section_title": "Year on Year Exposure change - EUR",
+            "type": "table",
+            "comparison_dates": ["Jun-24", "Jun-23"],
+            "summary": "The offset of TRY devaluation is highlighted by using fx rates as at date of aggs.",
+            "footnote": "TCMB FX rates: 1 EUR = 35.183 TRY at 30/6/24; 1 EUR = 28.483 TRY at 30/6/23",
+            "data": [
+              {"Cresta Zone": 1, "policy_count_jun24": 2610150, "sum_insured_eur_jun24": 38857813276, "policy_count_jun23": 2707976, "sum_insured_eur_jun23": 23123886900, "policy_count_change_pct": -0.036, "sum_insured_change_pct": 0.680},
+              {"Cresta Zone": 2, "policy_count_jun24": 376747, "sum_insured_eur_jun24": 5522447795, "policy_count_jun23": 404524, "sum_insured_eur_jun23": 3443281412, "policy_count_change_pct": -0.069, "sum_insured_change_pct": 0.604},
+              {"Cresta Zone": 3, "policy_count_jun24": 603224, "sum_insured_eur_jun24": 9048533692, "policy_count_jun23": 625930, "sum_insured_eur_jun23": 5420555545, "policy_count_change_pct": -0.036, "sum_insured_change_pct": 0.669},
+              {"Cresta Zone": 4, "policy_count_jun24": 802424, "sum_insured_eur_jun24": 11813123984, "policy_count_jun23": 833706, "sum_insured_eur_jun23": 6941426364, "policy_count_change_pct": -0.038, "sum_insured_change_pct": 0.702},
+              {"Cresta Zone": 5, "policy_count_jun24": 1134434, "sum_insured_eur_jun24": 15924512426, "policy_count_jun23": 1188425, "sum_insured_eur_jun23": 9587997610, "policy_count_change_pct": -0.045, "sum_insured_change_pct": 0.661},
+              {"Cresta Zone": 6, "policy_count_jun24": 568619, "sum_insured_eur_jun24": 7885581752, "policy_count_jun23": 589286, "sum_insured_eur_jun23": 4799982515, "policy_count_change_pct": -0.035, "sum_insured_change_pct": 0.643},
+              {"Cresta Zone": 7, "policy_count_jun24": 632507, "sum_insured_eur_jun24": 8873036380, "policy_count_jun23": 640186, "sum_insured_eur_jun23": 5209798104, "policy_count_change_pct": -0.012, "sum_insured_change_pct": 0.703},
+              {"Cresta Zone": 8, "policy_count_jun24": 1103628, "sum_insured_eur_jun24": 18686929252, "policy_count_jun23": 1086821, "sum_insured_eur_jun23": 10010488799, "policy_count_change_pct": 0.015, "sum_insured_change_pct": 0.867},
+              {"Cresta Zone": 9, "policy_count_jun24": 695286, "sum_insured_eur_jun24": 11511785305, "policy_count_jun23": 750942, "sum_insured_eur_jun23": 7408598390, "policy_count_change_pct": -0.074, "sum_insured_change_pct": 0.554},
+              {"Cresta Zone": 10, "policy_count_jun24": 967089, "sum_insured_eur_jun24": 16263134584, "policy_count_jun23": 1025970, "sum_insured_eur_jun23": 10035574117, "policy_count_change_pct": -0.057, "sum_insured_change_pct": 0.621},
+              {"Cresta Zone": 11, "policy_count_jun24": 386731, "sum_insured_eur_jun24": 5516731816, "policy_count_jun23": 407332, "sum_insured_eur_jun23": 3412438158, "policy_count_change_pct": -0.051, "sum_insured_change_pct": 0.617},
+              {"Cresta Zone": 12, "policy_count_jun24": 561500, "sum_insured_eur_jun24": 8218951183, "policy_count_jun23": 599650, "sum_insured_eur_jun23": 5133702603, "policy_count_change_pct": -0.064, "sum_insured_change_pct": 0.601},
+              {"Cresta Zone": 13, "policy_count_jun24": 136482, "sum_insured_eur_jun24": 2095024273, "policy_count_jun23": 146693, "sum_insured_eur_jun23": 1328686129, "policy_count_change_pct": -0.070, "sum_insured_change_pct": 0.577},
+              {"Cresta Zone": 14, "policy_count_jun24": 493571, "sum_insured_eur_jun24": 9646477803, "policy_count_jun23": 489060, "sum_insured_eur_jun23": 5223617649, "policy_count_change_pct": 0.009, "sum_insured_change_pct": 0.847},
+              {"Cresta Zone": 15, "policy_count_jun24": 197358, "sum_insured_eur_jun24": 3433078514, "policy_count_jun23": 205023, "sum_insured_eur_jun23": 1849112966, "policy_count_change_pct": -0.037, "sum_insured_change_pct": 0.857}
+            ],
+            "total": {"policy_count_jun24": 11269750, "sum_insured_eur_jun24": 173297162035, "policy_count_jun23": 11701524, "sum_insured_eur_jun23": 102929147261, "policy_count_change_pct": -0.0369, "sum_insured_change_pct": 0.6837}
+          }
+        ]
+      },
+      {
+        "section_title": "Claims Performance",
+        "content": [
+          {
+            "sub_section_title": "Court judgement",
+            "type": "text_summary",
+            "points": [
+              "The Court final legal precedent found in favour of Company ABC, resulting in a reduction in required Outstanding claims reserves.",
+              "The Court concluded that Company ABC's liability is limited to the insurance amount stated in the policy and no double limit would be applied.",
+              "The court dismissed appeal objections and upheld the previous decision, confirming Company ABC fulfilled its responsibilities per policy and legal regulations."
+            ]
+          }
+        ]
+      },
+      {
+        "section_title": "Appendix B: Modelling Details",
+        "content": [
+          {
+            "type": "text_summary",
+            "points": [
+              "Recent earthquake raised concerns about industry-standard model performance in the region.",
+              "Region A: Predicted shaking intensities aligned well with observed data.",
+              "Region B: Significant underestimation occurred due to the unmodeled Valley Amplification Effect.",
+              "Impact of Underestimation: Discrepancies in ground movement predictions affect damage estimates (e.g., high-rise steel building MDR predicted 50% at 0.9g PGA, actual 78% at 1.4g PGA). Loss expectations were significantly understated.",
+              "Unpriced Risk: Areas with underestimated seismic activity may have inadequate/mispriced coverage. Regions like Metropolitan X (less amplification) may not face the same risk adjustments.",
+              "Adjustments to Risk Models: Industry assessments suggest model vulnerability curves may be understated, particularly at moderate intensity levels (partial structural failures).",
+              "Comparison with Y's seismic research showed a higher vulnerability index.",
+              "An updated risk framework (Revised View of Risk) incorporating higher vulnerability and amended hazard module is maintained for 2025."
+            ]
+          }
+        ]
+      }
+    ]
+  }

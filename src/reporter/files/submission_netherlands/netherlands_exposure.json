@@ -1,0 +1,484 @@
+{
+    "title": "Exposure Data Summary",
+    "metadata": null,
+    "tables": [
+      {
+        "id": "construction_exposure",
+        "description": "Exposure by Construction Type",
+        "footnotes": [],
+        "data": [
+          {
+            "Code": 100,
+            "Description": "Unknown",
+            "Location Count": 1104975,
+            "TIV": 0
+          },
+          {
+            "Code": 131,
+            "Description": "Reinforced concrete",
+            "Location Count": 60434,
+            "TIV": 22359812644
+          },
+          {
+            "Code": "Total:",
+            "Description": null,
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          }
+        ]
+      },
+      {
+        "id": "occupancy_exposure",
+        "description": "Exposure by Occupancy Type",
+        "footnotes": [],
+        "data": [
+          {
+            "Code": 301,
+            "Description": "General residential",
+            "Location Count": 922768,
+            "TIV": 205882618854
+          },
+          {
+            "Code": 311,
+            "Description": "General commercial",
+            "Location Count": 151599,
+            "TIV": 151910315231
+          },
+          {
+            "Code": 303,
+            "Description": "Permanent dwelling: multi-family",
+            "Location Count": 58998,
+            "TIV": 86520293070
+          },
+          {
+            "Code": 302,
+            "Description": "Permanent dwelling: single-family",
+            "Location Count": 44436,
+            "TIV": 10786268034
+          },
+          {
+            "Code": 307,
+            "Description": "Terraced dwellings",
+            "Location Count": 25478,
+            "TIV": 22080078009
+          },
+          {
+            "Code": 343,
+            "Description": "General services",
+            "Location Count": 544,
+            "TIV": 9350241216
+          },
+          {
+            "Code": 373,
+            "Description": "Agriculture",
+            "Location Count": 1617,
+            "TIV": 1264921388
+          },
+          {
+            "Code": "Total:",
+            "Description": null,
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          }
+        ]
+      },
+      {
+        "id": "year_built_exposure",
+        "description": "Exposure by Year Built",
+        "footnotes": [],
+        "data": [
+          {
+            "Year Built": "Unknown",
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          },
+          {
+            "Year Built": "18264",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1951-1955",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1956-1960",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1961-1965",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1966-1970",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1971-1975",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1976-1980",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1981-1985",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1986-1990",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1991-1995",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "1996-2000",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "2001-2005",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "2006-2010",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "2011-2015",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "2016-2020",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "2021-2025",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Year Built": "Total:",
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          }
+        ]
+      },
+      {
+        "id": "height_exposure",
+        "description": "Exposure by Height",
+        "footnotes": [],
+        "data": [
+          {
+            "Height": "Unknown",
+            "Location Count": 1165409,
+            "TIV": 488314495429
+          },
+          {
+            "Height": "0",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "1",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "2",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "3",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "4",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "5",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "6",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "7",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": ">8",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Height": "Total:",
+            "Location Count": 1165409,
+            "TIV": 488314495429
+          }
+        ]
+      },
+       {
+         "id": "geocode_resolution_exposure",
+         "description": "Exposure by Geocode Resolution",
+         "footnotes": [],
+         "data": [
+          {
+            "Geocode Resolution": "Postal Code Centroid",
+            "Location Count": 1161370,
+            "TIV": 476897621602
+          },
+          {
+            "Geocode Resolution": "Cresta Centroid",
+            "Location Count": 3600,
+            "TIV": 7159956522
+          },
+          {
+            "Geocode Resolution": "None",
+            "Location Count": 439,
+            "TIV": 4256917305
+          },
+          {
+            "Geocode Resolution": "Point",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Aggregated",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Exact Address",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Area Centroid",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "City Centroid",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Street Centroid",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Country",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Relaxed Address",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Suburb ID",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "User Supplied",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "ZIP9 Centroid",
+            "Location Count": 0,
+            "TIV": 0
+          },
+          {
+            "Geocode Resolution": "Total:",
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          }
+        ]
+      },
+      {
+         "id": "peril_exposure",
+         "description": "Exposure by Peril",
+         "footnotes": [],
+         "data": [
+          {
+            "Peril": "Wind",
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          },
+          {
+            "Peril": "Total:",
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          }
+        ]
+      },
+      {
+         "id": "geographic_region_country_exposure",
+         "description": "Exposure by Geographic Region - Country",
+         "footnotes": [],
+         "data": [
+          {
+            "Country Code": "BE",
+            "Country Name": "Belgium",
+            "Location Count": 82071,
+            "TIV": 20213411064
+          },
+          {
+            "Country Code": "NL",
+            "Country Name": "Netherlands",
+            "Location Count": 1083338,
+            "TIV": 468101084366
+          },
+          {
+            "Country Code": "Total:",
+            "Country Name": null,
+            "Location Count": 1165409,
+            "TIV": 488314495430
+          }
+        ]
+      },
+      {
+         "id": "geographic_region_area_exposure",
+         "description": "Exposure by Geographic Region - Area",
+         "footnotes": [],
+         "data": [
+          { "Area Code": "BEL 1", "Area Name": "BEL 1", "Country Code": "BE", "Location Count": 4289, "TIV": 4256917305 },
+          { "Area Code": "BEL 2", "Area Name": "BEL 2", "Country Code": "BE", "Location Count": 23292, "TIV": 4214587798 },
+          { "Area Code": "BEL 3", "Area Name": "BEL 3", "Country Code": "BE", "Location Count": 10172, "TIV": 2503037019 },
+          { "Area Code": "BEL 4", "Area Name": "BEL 4", "Country Code": "BE", "Location Count": 7880, "TIV": 1881684627 },
+          { "Area Code": "BEL 5", "Area Name": "BEL 5", "Country Code": "BE", "Location Count": 4411, "TIV": 1160670537 },
+          { "Area Code": "BEL 6", "Area Name": "BEL 6", "Country Code": "BE", "Location Count": 3572, "TIV": 1060785662 },
+          { "Area Code": "BEL 7", "Area Name": "BEL 7", "Country Code": "BE", "Location Count": 5557, "TIV": 1587749873 },
+          { "Area Code": "BEL 8", "Area Name": "BEL 8", "Country Code": "BE", "Location Count": 9235, "TIV": 1896369037 },
+          { "Area Code": "BEL 9", "Area Name": "BEL 9", "Country Code": "BE", "Location Count": 9311, "TIV": 2651598206 },
+          { "Area Code": "NLD 10", "Area Name": "NLD 10", "Country Code": "NL", "Location Count": 50561, "TIV": 26714457980 },
+          { "Area Code": "NLD 11", "Area Name": "NLD 11", "Country Code": "NL", "Location Count": 16895, "TIV": 9257072110 },
+          { "Area Code": "NLD 12", "Area Name": "NLD 12", "Country Code": "NL", "Location Count": 23974, "TIV": 14488725134 },
+          { "Area Code": "NLD 13", "Area Name": "NLD 13", "Country Code": "NL", "Location Count": 18278, "TIV": 5911214588 },
+          { "Area Code": "NLD 14", "Area Name": "NLD 14", "Country Code": "NL", "Location Count": 16619, "TIV": 6722148157 },
+          { "Area Code": "NLD 15", "Area Name": "NLD 15", "Country Code": "NL", "Location Count": 17399, "TIV": 4969119821 },
+          { "Area Code": "NLD 16", "Area Name": "NLD 16", "Country Code": "NL", "Location Count": 16673, "TIV": 6218680449 },
+          { "Area Code": "NLD 17", "Area Name": "NLD 17", "Country Code": "NL", "Location Count": 15898, "TIV": 7179273727 },
+          { "Area Code": "NLD 18", "Area Name": "NLD 18", "Country Code": "NL", "Location Count": 11704, "TIV": 6861714454 },
+          { "Area Code": "NLD 19", "Area Name": "NLD 19", "Country Code": "NL", "Location Count": 15537, "TIV": 5557798199 },
+          { "Area Code": "NLD 20", "Area Name": "NLD 20", "Country Code": "NL", "Location Count": 14037, "TIV": 7515976122 },
+          { "Area Code": "NLD 21", "Area Name": "NLD 21", "Country Code": "NL", "Location Count": 16533, "TIV": 6828408042 },
+          { "Area Code": "NLD 22", "Area Name": "NLD 22", "Country Code": "NL", "Location Count": 24319, "TIV": 10915126350 },
+          { "Area Code": "NLD 23", "Area Name": "NLD 23", "Country Code": "NL", "Location Count": 16478, "TIV": 7343500213 },
+          { "Area Code": "NLD 24", "Area Name": "NLD 24", "Country Code": "NL", "Location Count": 17488, "TIV": 7800538450 },
+          { "Area Code": "NLD 25", "Area Name": "NLD 25", "Country Code": "NL", "Location Count": 35373, "TIV": 16481531439 },
+          { "Area Code": "NLD 26", "Area Name": "NLD 26", "Country Code": "NL", "Location Count": 20871, "TIV": 10077989342 },
+          { "Area Code": "NLD 27", "Area Name": "NLD 27", "Country Code": "NL", "Location Count": 17716, "TIV": 9907134145 },
+          { "Area Code": "NLD 28", "Area Name": "NLD 28", "Country Code": "NL", "Location Count": 7161, "TIV": 2702412299 },
+          { "Area Code": "NLD 29", "Area Name": "NLD 29", "Country Code": "NL", "Location Count": 16411, "TIV": 7253507443 },
+          { "Area Code": "NLD 30", "Area Name": "NLD 30", "Country Code": "NL", "Location Count": 36905, "TIV": 19885569306 },
+          { "Area Code": "NLD 31", "Area Name": "NLD 31", "Country Code": "NL", "Location Count": 18572, "TIV": 6910298303 },
+          { "Area Code": "NLD 32", "Area Name": "NLD 32", "Country Code": "NL", "Location Count": 17012, "TIV": 7128605710 },
+          { "Area Code": "NLD 33", "Area Name": "NLD 33", "Country Code": "NL", "Location Count": 16589, "TIV": 7687175213 },
+          { "Area Code": "NLD 34", "Area Name": "NLD 34", "Country Code": "NL", "Location Count": 14610, "TIV": 5594244824 },
+          { "Area Code": "NLD 35", "Area Name": "NLD 35", "Country Code": "NL", "Location Count": 19036, "TIV": 7180177029 },
+          { "Area Code": "NLD 36", "Area Name": "NLD 36", "Country Code": "NL", "Location Count": 6416, "TIV": 2680236509 },
+          { "Area Code": "NLD 37", "Area Name": "NLD 37", "Country Code": "NL", "Location Count": 16767, "TIV": 8039991565 },
+          { "Area Code": "NLD 38", "Area Name": "NLD 38", "Country Code": "NL", "Location Count": 20460, "TIV": 8539704384 },
+          { "Area Code": "NLD 39", "Area Name": "NLD 39", "Country Code": "NL", "Location Count": 15486, "TIV": 6184317075 },
+          { "Area Code": "NLD 40", "Area Name": "NLD 40", "Country Code": "NL", "Location Count": 5965, "TIV": 2969485483 },
+          { "Area Code": "NLD 41", "Area Name": "NLD 41", "Country Code": "NL", "Location Count": 7368, "TIV": 2775979891 },
+          { "Area Code": "NLD 42", "Area Name": "NLD 42", "Country Code": "NL", "Location Count": 5944, "TIV": 2295536855 },
+          { "Area Code": "NLD 43", "Area Name": "NLD 43", "Country Code": "NL", "Location Count": 9584, "TIV": 3589401553 },
+          { "Area Code": "NLD 44", "Area Name": "NLD 44", "Country Code": "NL", "Location Count": 9800, "TIV": 3678801240 },
+          { "Area Code": "NLD 45", "Area Name": "NLD 45", "Country Code": "NL", "Location Count": 6590, "TIV": 2552662789 },
+          { "Area Code": "NLD 46", "Area Name": "NLD 46", "Country Code": "NL", "Location Count": 7839, "TIV": 2711001913 },
+          { "Area Code": "NLD 47", "Area Name": "NLD 47", "Country Code": "NL", "Location Count": 10077, "TIV": 4169907277 },
+          { "Area Code": "NLD 48", "Area Name": "NLD 48", "Country Code": "NL", "Location Count": 8773, "TIV": 3416010772 },
+          { "Area Code": "NLD 49", "Area Name": "NLD 49", "Country Code": "NL", "Location Count": 5480, "TIV": 3067486016 },
+          { "Area Code": "NLD 50", "Area Name": "NLD 50", "Country Code": "NL", "Location Count": 16641, "TIV": 6720024702 },
+          { "Area Code": "NLD 51", "Area Name": "NLD 51", "Country Code": "NL", "Location Count": 14003, "TIV": 5741605901 },
+          { "Area Code": "NLD 52", "Area Name": "NLD 52", "Country Code": "NL", "Location Count": 14898, "TIV": 6904754774 },
+          { "Area Code": "NLD 53", "Area Name": "NLD 53", "Country Code": "NL", "Location Count": 10579, "TIV": 4585991702 },
+          { "Area Code": "NLD 54", "Area Name": "NLD 54", "Country Code": "NL", "Location Count": 10988, "TIV": 5120088325 },
+          { "Area Code": "NLD 55", "Area Name": "NLD 55", "Country Code": "NL", "Location Count": 10072, "TIV": 4847580640 },
+          { "Area Code": "NLD 56", "Area Name": "NLD 56", "Country Code": "NL", "Location Count": 7599, "TIV": 3833235745 },
+          { "Area Code": "NLD 57", "Area Name": "NLD 57", "Country Code": "NL", "Location Count": 10574, "TIV": 4500572008 },
+          { "Area Code": "NLD 58", "Area Name": "NLD 58", "Country Code": "NL", "Location Count": 5764, "TIV": 2430357980 },
+          { "Area Code": "NLD 59", "Area Name": "NLD 59", "Country Code": "NL", "Location Count": 11383, "TIV": 5475750650 },
+          { "Area Code": "NLD 60", "Area Name": "NLD 60", "Country Code": "NL", "Location Count": 15369, "TIV": 6020119748 },
+          { "Area Code": "NLD 61", "Area Name": "NLD 61", "Country Code": "NL", "Location Count": 12887, "TIV": 5347619857 },
+          { "Area Code": "NLD 62", "Area Name": "NLD 62", "Country Code": "NL", "Location Count": 13362, "TIV": 5966582573 },
+          { "Area Code": "NLD 63", "Area Name": "NLD 63", "Country Code": "NL", "Location Count": 15490, "TIV": 6184237099 },
+          { "Area Code": "NLD 64", "Area Name": "NLD 64", "Country Code": "NL", "Location Count": 12509, "TIV": 5428914250 },
+          { "Area Code": "NLD 65", "Area Name": "NLD 65", "Country Code": "NL", "Location Count": 16887, "TIV": 6815809401 },
+          { "Area Code": "NLD 66", "Area Name": "NLD 66", "Country Code": "NL", "Location Count": 13166, "TIV": 5235491500 },
+          { "Area Code": "NLD 67", "Area Name": "NLD 67", "Country Code": "NL", "Location Count": 9305, "TIV": 4090480177 },
+          { "Area Code": "NLD 68", "Area Name": "NLD 68", "Country Code": "NL", "Location Count": 17718, "TIV": 7626651434 },
+          { "Area Code": "NLD 69", "Area Name": "NLD 69", "Country Code": "NL", "Location Count": 10869, "TIV": 3489144150 },
+          { "Area Code": "NLD 70", "Area Name": "NLD 70", "Country Code": "NL", "Location Count": 7235, "TIV": 2752493442 },
+          { "Area Code": "NLD 71", "Area Name": "NLD 71", "Country Code": "NL", "Location Count": 5065, "TIV": 2063756442 },
+          { "Area Code": "NLD 72", "Area Name": "NLD 72", "Country Code": "NL", "Location Count": 7364, "TIV": 3007682350 },
+          { "Area Code": "NLD 73", "Area Name": "NLD 73", "Country Code": "NL", "Location Count": 10365, "TIV": 4218440836 },
+          { "Area Code": "NLD 74", "Area Name": "NLD 74", "Country Code": "NL", "Location Count": 13761, "TIV": 6250500822 },
+          { "Area Code": "NLD 75", "Area Name": "NLD 75", "Country Code": "NL", "Location Count": 19010, "TIV": 7745489663 },
+          { "Area Code": "NLD 76", "Area Name": "NLD 76", "Country Code": "NL", "Location Count": 16457, "TIV": 6981629176 },
+          { "Area Code": "NLD 77", "Area Name": "NLD 77", "Country Code": "NL", "Location Count": 5467, "TIV": 2296621193 },
+          { "Area Code": "NLD 78", "Area Name": "NLD 78", "Country Code": "NL", "Location Count": 6575, "TIV": 2764062641 },
+          { "Area Code": "NLD 79", "Area Name": "NLD 79", "Country Code": "NL", "Location Count": 6633, "TIV": 2906073011 },
+          { "Area Code": "NLD 80", "Area Name": "NLD 80", "Country Code": "NL", "Location Count": 15026, "TIV": 6318110779 },
+          { "Area Code": "NLD 81", "Area Name": "NLD 81", "Country Code": "NL", "Location Count": 5915, "TIV": 2611690459 },
+          { "Area Code": "NLD 82", "Area Name": "NLD 82", "Country Code": "NL", "Location Count": 10875, "TIV": 3826894175 },
+          { "Area Code": "NLD 83", "Area Name": "NLD 83", "Country Code": "NL", "Location Count": 6423, "TIV": 2554314557 },
+          { "Area Code": "NLD 84", "Area Name": "NLD 84", "Country Code": "NL", "Location Count": 7863, "TIV": 3032912630 },
+          { "Area Code": "NLD 85", "Area Name": "NLD 85", "Country Code": "NL", "Location Count": 2698, "TIV": 959912809 },
+          { "Area Code": "NLD 86", "Area Name": "NLD 86", "Country Code": "NL", "Location Count": 3309, "TIV": 1254973824 },
+          { "Area Code": "NLD 87", "Area Name": "NLD 87", "Country Code": "NL", "Location Count": 2019, "TIV": 791071441 },
+          { "Area Code": "NLD 88", "Area Name": "NLD 88", "Country Code": "NL", "Location Count": 443, "TIV": 203441807 },
+          { "Area Code": "NLD 89", "Area Name": "NLD 89", "Country Code": "NL", "Location Count": 5840, "TIV": 2268109999 },
+          { "Area Code": "NLD 90", "Area Name": "NLD 90", "Country Code": "NL", "Location Count": 3522, "TIV": 1160112538 },
+          { "Area Code": "NLD 91", "Area Name": "NLD 91", "Country Code": "NL", "Location Count": 2167, "TIV": 914737690 },
+          { "Area Code": "NLD 92", "Area Name": "NLD 92", "Country Code": "NL", "Location Count": 11385, "TIV": 3291771380 },
+          { "Area Code": "NLD 93", "Area Name": "NLD 93", "Country Code": "NL", "Location Count": 2718, "TIV": 891467810 },
+          { "Area Code": "NLD 94", "Area Name": "NLD 94", "Country Code": "NL", "Location Count": 6713, "TIV": 2550754427 },
+          { "Area Code": "NLD 95", "Area Name": "NLD 95", "Country Code": "NL", "Location Count": 10698, "TIV": 3243317273 },
+          { "Area Code": "NLD 96", "Area Name": "NLD 96", "Country Code": "NL", "Location Count": 12507, "TIV": 4381025717 },
+          { "Area Code": "NLD 97", "Area Name": "NLD 97", "Country Code": "NL", "Location Count": 15985, "TIV": 7011808746 },
+          { "Area Code": "NLD 98", "Area Name": "NLD 98", "Country Code": "NL", "Location Count": 1748, "TIV": 510862832 },
+          { "Area Code": "NLD 99", "Area Name": "NLD 99", "Country Code": "NL", "Location Count": 4888, "TIV": 1884784798 },
+          { "Area Code": "Total:", "Area Name": null, "Country Code": null, "Location Count": 1165409, "TIV": 488314495430 }
+        ]
+      },
+      {
+         "id": "geographic_region_subarea_exposure",
+         "description": "Exposure by Geographic Region - Subarea (Table is too long to fit fully in the image, data truncated)",
+         "footnotes": [],
+         "data": [
+           { "Subarea": "Total", "Area": null, "Area Code": null, "Country Code": null, "Location Count": 0, "TIV": 0 }
+          ]
+      }
+    ]
+  }
