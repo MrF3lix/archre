@@ -72,8 +72,8 @@ export type Process = {
     created: string
 }
 
-export const getProcesses = async(): Promise<Process[]> => {
-    const models = await pb.collection('process').getFullList({expand: 'client'})
+export const getProcesses = async (): Promise<Process[]> => {
+    const models = await pb.collection('process').getFullList({ expand: 'client' })
     return models.map(c => ({
         id: c.id,
         cedant: c.expand?.client?.name || '-',
@@ -123,9 +123,13 @@ export const setProcessStatus = async (processId: string, status: any) => {
 
 
 export const subscribeToProcessStatusChange = (processId: string, callback: any) => {
-    pb.collection('process').subscribe(processId, (e) => {
-        callback(e)
-    });
+    try {
+        pb.collection('process').subscribe(processId, (e) => {
+            callback(e)
+        });
+    } catch {
+        console.error({ processId })
+    }
 }
 
 export const saveReport = async (processId: string, report: any) => {

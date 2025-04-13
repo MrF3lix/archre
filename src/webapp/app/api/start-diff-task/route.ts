@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        "country": client.country,
+        // "country": client.country,
         "contract_old": `${collection}/${processId}/${payload.files[0].split('/').at(-1)}`,
         "contract_new": `${collection}/${processId}/${payload.files[1].split('/').at(-1)}`
       }),

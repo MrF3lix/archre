@@ -48,12 +48,14 @@ const Login = () => {
                 <div className='bg-white w-96 p-4 rounded-sm border-1 border-gray-300 flex flex-col gap-4 items-center'>
                     <Image src="/logo.png" width={100} height={100} alt="Logo" priority={true} />
                     <h1 className="text-2xl leading-tight tracking-tight text-gray-900">Flooq Underwriter</h1>
-                    <div className='flex flex-col w-full gap-1'>
-                        <label className='text-xs'>Login with your E-Mail</label>
-                        <input className='p-2 border rounded-sm border-gray-300 text-sm' type='email' placeholder='E-Mail Address' value={email} onChange={e => setEmail(e.target.value)} />
-                    </div>
                     {!otpId &&
-                        <Button variant="main" className='w-full' onClick={() => otpRequest()}>Request OTP</Button>
+                        <>
+                            <div className='flex flex-col w-full gap-1'>
+                                <label className='text-xs'>Login with your E-Mail</label>
+                                <input className='p-2 border rounded-sm border-gray-300 text-sm' type='email' placeholder='E-Mail Address' value={email} onChange={e => setEmail(e.target.value)} />
+                            </div>
+                            <Button variant="main" className='w-full' onClick={() => otpRequest()}>Request OTP</Button>
+                        </>
                     }
                     {otpId &&
                         <>
