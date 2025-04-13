@@ -8,7 +8,6 @@ import json
 import locale
 import re
 from pathlib import Path
-from typing import Optional
 
 from dotenv import load_dotenv
 
@@ -66,16 +65,16 @@ Expiring Premium: [Value]
 
 
 # --- Helper Functions --- #
-def read_text_file(filepath: Path) -> str:
+def load_file(file_path: Path) -> str | None:
     """Loads content from a file."""
     try:
-        with open(filepath, "r", encoding="utf-8") as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
-        print(f"Error: File not found - {filepath}")
+        print(f"Error: File not found - {file_path}")
         return None
     except Exception as e:
-        print(f"Error reading file {filepath}: {e}")
+        print(f"Error reading file {file_path}: {e}")
         return None
 
 
@@ -83,13 +82,18 @@ def initialize_llm():
     """Initializes the LLM provider based on configuration."""
     print(f"Initializing LLM: {LLM_PROVIDER} - Model: {MODEL_NAME}")
     if LLM_PROVIDER == "google":
-        llm = GoogleGenAI(
-            model_name=MODEL_NAME,
-            temperature=TEMPERATURE,
-            # max_output_tokens=MAX_OUTPUT_TOKENS # Check LlamaIndex equivalent if needed
-        )
-        print("Google GenAI LLM initialized successfully.")
-        return llm
+        try:
+            # Use LlamaIndex GoogleGenAI
+            llm = GoogleGenAI(
+                model_name=MODEL_NAME,
+                temperature=TEMPERATURE,
+                # max_output_tokens=MAX_OUTPUT_TOKENS # Check LlamaIndex equivalent if needed
+            )
+            print("Google GenAI LLM initialized successfully.")
+            return llm
+        except Exception as e:
+            print(f"Error initializing Google GenAI LLM: {e}")
+            return None
     else:
         print(f"Error: Unsupported LLM provider '{LLM_PROVIDER}' specified.")
         return None
@@ -121,22 +125,61 @@ def extract_concise_subject(question: str) -> str:
     return subject[:75]  # Limit to 75 chars for brevity
 
 
+def load_investigation_json(json_path: Path) -> list[str] | None:
+    """Loads active investigation points from a JSON file."""
+    active_points = []
+    try:
+        with open(json_path, "r") as f:
+            data = json.load(f)
+
+        if not isinstance(data, dict) or "investigation_points" not in data:
+            print(
+                f"Error: Invalid format in {json_path}. Expected a dictionary with 'investigation_points' key."
+            )
+            return None
+
+        points_list = data.get("investigation_points")
+        if not isinstance(points_list, list):
+            print(f"Error: 'investigation_points' in {json_path} should be a list.")
+            return None
+
+        for item in points_list:
+            if isinstance(item, dict) and item.get("active") is True:
+                point_text = item.get("point")
+                if isinstance(point_text, str) and point_text:
+                    active_points.append(point_text)
+                else:
+                    print(
+                        f"Warning: Skipping active item with invalid 'point' in {json_path}."
+                    )
+            elif isinstance(item, dict) and item.get("active") is not True:
+                pass  # Skip inactive points
+            else:
+                print(
+                    f"Warning: Skipping invalid item in 'investigation_points' list in {json_path}."
+                )
+
+        if not active_points:
+            print(f"No active investigation points found in {json_path}.")
+            return None
+
+        return active_points
+
+    except FileNotFoundError:  # Should be caught by is_file(), but good practice
+        print(f"Error: File not found - {json_path}")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: Could not decode JSON from {json_path}")
+        return None
+    except Exception as e:
+        print(f"Error loading investigation JSON from {json_path}: {e}")
+        return None
+
+
 # --- Main Execution --- #
 def generate_florida_proposal(
-    investigation_points: list[str],
-    local_data_path: Path,
-    significant_changes_json: Optional[str] = None,
+    local_data_path: Path, investigation_points: list[str] | None = None
 ):
-    """Generates the underwriting proposal report for Florida client.
-
-    Args:
-        investigation_points: A list of strings representing user-defined questions.
-        local_data_path: Path object pointing to the downloaded client data directory.
-        significant_changes_json: Optional JSON string of significant changes.
-            # TODO: Incorporate significant_changes_json into the report generation process if needed.
-    """
-    print(f"--- Florida Proposal Agent --- Using data from: {local_data_path}")
-
     # Placeholder for structured response
     response = {
         "report_markdown": "",
@@ -154,9 +197,9 @@ def generate_florida_proposal(
 
     # 1. Load Data
     print("Loading submission data...")
-    terms_data = read_text_file(terms_file)
-    submission_info_data = read_text_file(submission_info_file)
-    contract_data = read_text_file(contract_file)
+    terms_data = load_file(terms_file)
+    submission_info_data = load_file(submission_info_file)
+    contract_data = load_file(contract_file)
 
     if not all([terms_data, submission_info_data, contract_data]):
         error_msg = (
@@ -596,7 +639,9 @@ if __name__ == "__main__":
     investigation_points_list = None
     if args.investigation_points:
         # Use the standalone loader within the agent for direct runs
-        investigation_points_list = None
+        investigation_points_list = load_investigation_json(
+            Path(args.investigation_points).resolve()
+        )
 
     data_path = Path(args.local_data_path).resolve()
     if not data_path.is_dir():

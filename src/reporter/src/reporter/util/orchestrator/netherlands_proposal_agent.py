@@ -9,10 +9,11 @@ import json
 import locale
 import re
 from pathlib import Path
-from typing import Optional
 
 from dotenv import load_dotenv
 from llama_index.core.prompts import PromptTemplate
+
+# LlamaIndex Imports instead of LangChain
 from llama_index.llms.google_genai import GoogleGenAI
 
 # --- Configuration ---
@@ -255,21 +256,8 @@ def calculate_totals_and_rols(
 
 # --- Main Execution --- #
 def generate_netherlands_proposal(
-    local_data_path: Path,
-    investigation_points: list[str] | None = None,
-    significant_changes_json: Optional[str] = None,
+    local_data_path: Path, investigation_points: list[str] | None = None
 ):
-    """Generates the underwriting proposal report for the Netherlands client.
-
-    Args:
-        local_data_path: Path object pointing to the downloaded client data directory.
-            Defaults to None, but required for processing.
-        investigation_points: A list of strings representing user-defined questions.
-        significant_changes_json: Optional JSON string of significant changes.
-            # TODO: Incorporate significant_changes_json into the report generation process if needed.
-    """
-    print(f"--- Netherlands Proposal Agent --- Using data from: {local_data_path}")
-
     # Placeholder for structured response
     response = {
         "report_markdown": "",
