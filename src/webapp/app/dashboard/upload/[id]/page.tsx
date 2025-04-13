@@ -1,4 +1,5 @@
 'use server'
+import { EventSource } from "eventsource"
 
 import { DocumentUpload } from "@/components/forms/file-upload"
 import { ChangeList } from "@/components/process/change-list"
@@ -8,6 +9,8 @@ import { Reloader } from "@/components/process/reloader"
 import { getWordingFileUrls, loadProcessDocuments } from "@/helper/pocketbase"
 import { ArrowPathIcon, DocumentCheckIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+
+global.EventSource = EventSource
 
 const Upload = async ({ params }: any) => {
     params = await params

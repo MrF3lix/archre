@@ -1,5 +1,8 @@
 import PocketBase from 'pocketbase'
 import dayjs from 'dayjs'
+import { EventSource } from "eventsource"
+
+global.EventSource = EventSource
 
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_URL)
 
