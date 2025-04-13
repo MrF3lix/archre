@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
       }),
     })
 
+    console.log(response)
     const data = await response.json()
 
     await saveContractChanges(payload.id, data)

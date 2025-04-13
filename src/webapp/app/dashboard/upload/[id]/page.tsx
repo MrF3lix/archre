@@ -7,6 +7,7 @@ import { Reloader } from "@/components/process/reloader"
 import { getWordingFileUrls, loadProcessDocuments } from "@/helper/pocketbase"
 import { ArrowPathIcon, DocumentCheckIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import Markdown from 'react-markdown'
 
 global.EventSource = EventSource
 
@@ -73,7 +74,14 @@ const Upload = async ({ params }: any) => {
                         <h2 className="text-2xl font-bold">Report Draft</h2>
                         <div className="bg-white p-4 rounded-sm flex flex-col gap-4">
 
-                            {!process?.report['report'] &&
+                            {process?.report['report_markdown'] &&
+                                <>
+                                    <Markdown>{process?.report['report_markdown']}</Markdown>
+                                </>
+                            }
+
+
+                            {!process?.report['report'] && !process?.report['report_markdown'] &&
                                 <p className="text-sm text-gray-700">Something went wrong while generating your report.</p>
                             }
                             
@@ -85,6 +93,9 @@ const Upload = async ({ params }: any) => {
                                         <>
                                             <h4 className="font-bold">Quotation Lines</h4>
                                             <p>{process?.report['report']['quotation_line']['suggestion_text']}</p>
+                                            <pre>
+                                                {JSON.stringify(process?.report['report']['quotation_line'], null, 2)}
+                                            </pre>
                                         </>
                                     }
 
