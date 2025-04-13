@@ -30,15 +30,15 @@ const Login = () => {
     }
 
     const login = async (provider: string) => {
-        // const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_URL)
-        // const { token, record: model } = await pb
-        //     .collection('users')
-        //     .authWithOAuth2({
-        //         provider: provider
-        //     })
+        const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_URL)
+        const { token, record: model } = await pb
+            .collection('users')
+            .authWithOAuth2({
+                provider: provider
+            })
 
-        // const cookie = JSON.stringify({ token, model });
-        // Cookies.set('pb_auth', cookie)
+        const cookie = JSON.stringify({ token, model });
+        Cookies.set('pb_auth', cookie)
         router.push('/dashboard');
     }
 
