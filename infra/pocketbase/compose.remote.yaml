@@ -6,6 +6,7 @@ services:
     labels:
       - "traefik.http.routers.pocketbase.tls.certresolver=cfresolver"
       - "traefik.http.routers.pocketbase.rule=Host(`api.flooq.io`)"
+      - "traefik.http.middlewares.pb-headers.headers.customrequestheaders.X-Real-IP=5.75.150.101"
       - "traefik.http.middlewares.pb-headers.headers.customrequestheaders.X-Forwarded-Proto=https"
       - "traefik.http.middlewares.pb-headers.headers.customrequestheaders.X-Forwarded-Host=api.flooq.io"
       - "traefik.http.routers.pocketbase.middlewares=pb-headers"
