@@ -5,18 +5,21 @@ Orchestrates the generation of underwriting proposal reports based on client and
 import argparse
 import json
 from pathlib import Path
+from typing import Optional
 
 from .florida_proposal_agent import generate_florida_proposal
 from .netherlands_proposal_agent import generate_netherlands_proposal
-
-# Import agent functions (assuming they will be refactored)
 from .turkey_proposal_agent import generate_turkey_proposal
 
 # --- Configuration ---
-# Base directory where data downloaded from MinIO is expected
-# Example: if MinIO path is 'data/submission_florida', local path might be './data/submission_florida'
-# IMPORTANT: This path is relative to where the orchestrator is *run* from.
-LOCAL_DATA_BASE_PATH = Path("./data")
+# Determine the project's base data directory relative to this orchestrator file
+# Assumes orchestrator.py is at src/reporter/src/reporter/util/orchestrator/orchestrator.py
+# and data is at src/reporter/files/
+ORCHESTRATOR_DIR = Path(__file__).parent
+CORRECT_FILES_DIR = (
+    ORCHESTRATOR_DIR.parent.parent.parent.parent / "files"
+)  # Go up 4 levels (orchestrator->util->reporter->src) then into 'files'
+LOCAL_DATA_BASE_PATH = CORRECT_FILES_DIR.resolve()  # Use this corrected absolute path
 
 
 def load_investigation_json(json_path: Path) -> list[str] | None:
@@ -66,13 +69,16 @@ def load_investigation_json(json_path: Path) -> list[str] | None:
 
 
 def generate_report_for_client(
-    client_name: str, investigation_points: list[str] | None = None
+    client_name: str,
+    investigation_points: list[str] | None = None,
+    significant_changes_json: Optional[str] = None,
 ):
     """Loads data and calls the appropriate agent based on the client name.
 
     Args:
         client_name: The name of the client (e.g., 'turkey', 'florida').
         investigation_points: A list of strings representing investigation points, or None.
+        significant_changes_json: A JSON string containing significant changes, or None.
     """
     print(f"--- Starting Orchestration for Client: {client_name} ---")
 
@@ -82,18 +88,20 @@ def generate_report_for_client(
 
     # Select and call the appropriate agent
     client_lower = client_name.lower()
+
+    # Construct the local data path relative to the API files directory
     data_subpath = f"submission_{client_lower}"
-    local_data_path = (LOCAL_DATA_BASE_PATH / data_subpath).resolve()
+    local_data_path = LOCAL_DATA_BASE_PATH / data_subpath
 
     print(f"Expecting local data for {client_name} at: {local_data_path}")
 
     if not local_data_path.is_dir():
-        print(
-            f"Error: Local data directory not found at {local_data_path}. Ensure data exists relative to execution directory."
-        )
-        # In API context, we'll want to return an error, not just print
-        # For now, returning None to signal failure
-        return None
+        print(f"Error: Local data directory not found at {local_data_path}.")
+        return {
+            "report_markdown": "",
+            "status": "error",
+            "error": f"Data directory not found for client: {client_name}",
+        }
 
     agent_response = None  # Variable to hold the response from the agent
     if client_lower == "turkey":
@@ -101,31 +109,32 @@ def generate_report_for_client(
         agent_response = generate_turkey_proposal(
             investigation_points=points_to_investigate,
             local_data_path=local_data_path,
-            # We will add significant_changes path later
+            significant_changes_json=significant_changes_json,
         )
     elif client_lower == "florida":
         print("\nCalling Florida Proposal Agent...")
         agent_response = generate_florida_proposal(
             investigation_points=points_to_investigate,
             local_data_path=local_data_path,
-            # We will add significant_changes path later
+            significant_changes_json=significant_changes_json,
         )
     elif client_lower == "netherlands":
         print("\nCalling Netherlands Proposal Agent...")
         agent_response = generate_netherlands_proposal(
             investigation_points=points_to_investigate,
             local_data_path=local_data_path,
-            # We will add significant_changes path later
+            significant_changes_json=significant_changes_json,
         )
     else:
+        # This case should theoretically not be reached due to the path check above,
+        # but kept for robustness.
         print(
-            f"Error: Unknown client name '{client_name}'. Supported clients: turkey, florida, netherlands."
+            f"Error: Logic error - agent call attempted for unknown client '{client_name}'."
         )
-        # Return an error structure suitable for API
         return {
-            "report_markdown": "",
             "status": "error",
-            "error": f"Unknown client name: {client_name}",
+            "error": "Internal server error: Unknown client agent.",
+            "report_markdown": "",
         }
 
     print(f"--- Orchestration Complete for Client: {client_name} ---")
@@ -133,10 +142,16 @@ def generate_report_for_client(
     return agent_response
 
 
-def main(client_name: str, investigation_file_path: Path):
+def main(
+    client_name: str,
+    investigation_file_path: Path,
+    significant_changes_json: Optional[str] = None,
+):
     # We will adjust main/entry point later for API usage
     result = generate_report_for_client(
-        client_name, load_investigation_json(investigation_file_path)
+        client_name,
+        load_investigation_json(investigation_file_path),
+        significant_changes_json,
     )
     if result:
         print("\n--- Agent Result ---")
@@ -162,10 +177,16 @@ if __name__ == "__main__":
         required=True,
         help="Path to the JSON file containing user investigation points.",
     )
+    parser.add_argument(
+        "--significant_changes_json",
+        type=str,
+        required=False,
+        help="JSON string containing significant changes.",
+    )
 
     args = parser.parse_args()
 
     # Resolve the path relative to the current working directory if it's not absolute
     investigation_file_path = args.investigation_json.resolve()
 
-    main(args.client, investigation_file_path)
+    main(args.client, investigation_file_path, args.significant_changes_json)

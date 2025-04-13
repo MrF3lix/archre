@@ -24,6 +24,7 @@ async def generate_report_endpoint(request: ReportRequest):
         result = generate_report_for_client(
             client_name=request.client,
             investigation_points=request.investigation_points,
+            significant_changes_json=request.significant_changes_json,
         )
 
         # Handle cases where the orchestrator signals an error

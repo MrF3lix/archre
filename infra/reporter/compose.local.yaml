@@ -7,7 +7,7 @@ services:
       DOCS_URL: docs
 
     ports:
-      - 8000:8000
+      - 8001:8000
 
   minio:
     image: minio/minio:latest

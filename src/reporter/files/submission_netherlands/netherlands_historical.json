@@ -1,0 +1,100 @@
+{
+    "title": "Company X - Property Cat XL - Historical Losses exceeding EUR 30m",
+    "metadata": {
+      "Cedant": "Company X Re",
+      "Currency": "EUR",
+      "Renewal": 2024
+    },
+    "tables": [
+      {
+        "id": "historical_losses_gt_30m",
+        "description": "Historical Losses exceeding EUR 30m by Event and Company",
+        "footnotes": [
+          "* Company X including Co C and Co A",
+          "** Based on application 72 hours period. Under current Loss Occurrence Defintion, subject loss would be € 132,607,865. In addition and out of prudency, a EUR 5 mio IBNR reserve is taken up."
+        ],
+        "data": [
+          {
+            "Date of Loss": "25/26 January 1990",
+            "Event": "Windstorm",
+            "Company X - NL": 47800000,
+            "Company X - B": 0,
+            "Co C": 26670711,
+            "Co A": 0,
+            "Co B": 20081095,
+            "Total": 94551806
+          },
+          {
+            "Date of Loss": "26/28 February 1990",
+            "Event": "Windstorm",
+            "Company X - NL": 10700000,
+            "Company X - B": 0,
+            "Co C": 6109017,
+            "Co A": 0,
+            "Co B": 0,
+            "Total": 16809017
+          },
+          {
+            "Date of Loss": "27 October 2002",
+            "Event": "Windstorm",
+            "Company X - NL": 12250000,
+            "Company X - B": 0,
+            "Co C": 10894131,
+            "Co A": 2205755,
+            "Co B": 6910276,
+            "Total": 32260161
+          },
+          {
+            "Date of Loss": "18 January 2007",
+            "Event": "Windstorm",
+            "Company X - NL": 23950000,
+            "Company X - B": 0,
+            "Co C": 16571588,
+            "Co A": 3382756,
+            "Co B": 13575000,
+            "Total": 57479343
+          },
+          {
+            "Date of Loss": "22-24 June 2016 *",
+            "Event": "Hail/Water/Wind",
+            "Company X - NL": 15070000,
+            "Company X - B": 0,
+            "Co C": 24327843,
+            "Co A": 5013852,
+            "Co B": 11112000,
+            "Total": 55523694
+          },
+          {
+            "Date of Loss": "18 January 2018 *",
+            "Event": "Windstorm",
+            "Company X - NL": 17469673,
+            "Company X - B": 0,
+            "Co C": 17968879,
+            "Co A": 4588769,
+            "Co B": 12144207,
+            "Total": 52171528
+          },
+          {
+            "Date of Loss": "July 2021 * (incl. IBNR)",
+            "Event": "Precipitation/Flood",
+            "Company X - NL": 19751000,
+            "Company X - B": 9169000,
+            "Co C": 0,
+            "Co A": 875000,
+            "Co B": 0,
+            "Total": 29795000
+          },
+          {
+            "Date of Loss": "February 2022 * ** (incl. IBNR)",
+            "Event": "Windstorm",
+            "Company X - NL": 62441843,
+            "Company X - B": 4111063,
+            "Co C": 0,
+            "Co A": 6573088,
+            "Co B": 0,
+            "Total": 146251987
+          }
+        ]
+      }
+    ]
+  }

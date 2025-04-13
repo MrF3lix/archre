@@ -1,0 +1,116 @@
+{
+    "title": "Year End 2025 Company ABC Aggregates by Cresta",
+    "metadata": {
+      "Company": "Company ABC",
+      "Aggregation Level": "Cresta Zone",
+      "Effective Date": "31.10.2025"
+    },
+    "summary": {
+      "description": "Total Aggregates as at 31.10.2025",
+      "no_of_Policy": 13273399,
+      "Premium": 18139734024,
+      "TSI": 14172414940446
+    },
+    "aggregates_by_cresta": {
+      "description": "Aggregates broken down by Cresta Zone",
+      "footnotes": [],
+      "data": [
+        {
+          "Cresta Zone": 1,
+          "no_of_Policy": 3074209,
+          "Premium": 5277592361,
+          "TSI": 3177830767481
+        },
+        {
+          "Cresta Zone": 2,
+          "no_of_Policy": 443729,
+          "Premium": 497598958,
+          "TSI": 451631294575
+        },
+        {
+          "Cresta Zone": 3,
+          "no_of_Policy": 710471,
+          "Premium": 1398457984,
+          "TSI": 739998119892
+        },
+        {
+          "Cresta Zone": 4,
+          "no_of_Policy": 945087,
+          "Premium": 1523481757,
+          "TSI": 966089074263
+        },
+        {
+          "Cresta Zone": 5,
+          "no_of_Policy": 1336125,
+          "Premium": 2441893425,
+          "TSI": 1302322526127
+        },
+        {
+          "Cresta Zone": 6,
+          "no_of_Policy": 669714,
+          "Premium": 956421611,
+          "TSI": 644890749108
+        },
+        {
+          "Cresta Zone": 7,
+          "no_of_Policy": 744960,
+          "Premium": 766954782,
+          "TSI": 725645774470
+        },
+        {
+          "Cresta Zone": 8,
+          "no_of_Policy": 1299842,
+          "Premium": 1188251697,
+          "TSI": 1528235732306
+        },
+        {
+          "Cresta Zone": 9,
+          "no_of_Policy": 818901,
+          "Premium": 416807138,
+          "TSI": 941445296197
+        },
+        {
+          "Cresta Zone": 10,
+          "no_of_Policy": 1139028,
+          "Premium": 884849980,
+          "TSI": 1330015384237
+        },
+        {
+          "Cresta Zone": 11,
+          "no_of_Policy": 455488,
+          "Premium": 649037588,
+          "TSI": 451163836101
+        },
+        {
+          "Cresta Zone": 12,
+          "no_of_Policy": 661329,
+          "Premium": 801296958,
+          "TSI": 672154033962
+        },
+        {
+          "Cresta Zone": 13,
+          "no_of_Policy": 160747,
+          "Premium": 207083998,
+          "TSI": 171333176799
+        },
+        {
+          "Cresta Zone": 14,
+          "no_of_Policy": 581323,
+          "Premium": 953552119,
+          "TSI": 788898586320
+        },
+        {
+          "Cresta Zone": 15,
+          "no_of_Policy": 232446,
+          "Premium": 176453668,
+          "TSI": 280760588609
+        }
+      ],
+      "total": {
+          "Cresta Zone": "Total",
+          "no_of_Policy": 13273399,
+          "Premium": 18139734024,
+          "TSI": 14172414940446
+        }
+    }
+  }

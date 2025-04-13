@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+from typing import Optional
 
 from dotenv import load_dotenv
 from llama_index.llms.google_genai import GoogleGenAI
@@ -275,16 +276,21 @@ def extract_concise_subject(question):
 
 # --- Main Generation Function --- #
 def generate_turkey_proposal(
-    local_data_path: Path, investigation_points: list[str] | None = None
+    investigation_points: list[str] | None = None,
+    local_data_path: Path = None,
+    significant_changes_json: Optional[str] = None,
 ):
-    """
-    Generates the Turkey underwriting proposal report, incorporating calculations,
+    """Generates the Turkey underwriting proposal report, incorporating calculations,
     LLM insights, and user-defined investigation points.
 
     Args:
-        local_data_path: Path to the local data directory.
-        investigation_points: A list of specific points the user wants investigated.
+        investigation_points: A list of strings representing user-defined questions.
+        local_data_path: Path object pointing to the downloaded client data directory.
+                Defaults to None, but required for processing.
+        significant_changes_json: Optional JSON string of significant changes.
+            # TODO: Incorporate significant_changes_json into the report generation process if needed.
     """
+    print(f"--- Turkey Proposal Agent --- Using data from: {local_data_path}")
     # Placeholder for structured response
     response = {
         "report_markdown": "",

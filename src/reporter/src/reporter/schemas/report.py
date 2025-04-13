@@ -11,7 +11,9 @@ class ReportRequest(BaseModel):
     investigation_points: Optional[List[str]] = Field(
         None, description="A list of specific questions or points to investigate."
     )
-    # Add significant_changes_json: Optional[str] = Field(None, description="JSON string for significant changes") later if needed
+    significant_changes_json: Optional[str] = Field(
+        None, description="JSON string for significant changes"
+    )
 
 
 class ReportResponse(BaseModel):
