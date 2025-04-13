@@ -6,6 +6,7 @@ using direct file loading and LLM synthesis with complex total calculation.
 import argparse
 import json
 import locale
+import os
 import re
 from pathlib import Path
 
@@ -194,6 +195,9 @@ def generate_florida_proposal(
     terms_file = local_data_path / "florida_terms.json"
     submission_info_file = local_data_path / "florida_submission.json"
     contract_file = local_data_path / "florida_2024_contract.md"
+
+    print(terms_file)
+    print(os.path.isfile(terms_file))
 
     # 1. Load Data
     print("Loading submission data...")

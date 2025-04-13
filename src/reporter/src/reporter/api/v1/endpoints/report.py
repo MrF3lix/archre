@@ -1,5 +1,9 @@
+import tempfile
+from pathlib import Path
+
 from fastapi import APIRouter, HTTPException
 
+from reporter.core.config import settings
 from reporter.schemas.report import ReportRequest, ReportResponse
 from reporter.util.orchestrator.orchestrator import generate_report_for_client
 
@@ -14,61 +18,34 @@ router = APIRouter(tags=["report_generation"])
 # --------------------------------------------------------------------------------------
 @router.post("/generate", response_model=ReportResponse)
 async def generate_report_endpoint(request: ReportRequest):
-    """
-    Generates an underwriting proposal report based on the specified client
-    and optional investigation points.
-    """
-    try:
-        print(f"API received request for client: {request.client}")
-        # Call the orchestrator with the client name and investigation points list
-        result = generate_report_for_client(
-            client_name=request.client,
-            investigation_points=request.investigation_points,
-        )
+    with tempfile.TemporaryDirectory() as temp_dir:
+        try:
+            client_data_dir = Path(temp_dir)
 
-        # Handle cases where the orchestrator signals an error
-        if result is None:
-            # This might happen if the data directory wasn't found
-            raise HTTPException(
-                status_code=404,
-                detail=f"Could not find local data for client: {request.client}. Ensure data exists in the expected location.",
+            objects = settings.S3_CLIENT.list_objects(
+                bucket_name=settings.S3_BUCKET,
+                prefix=f"submission_{request.client.lower()}",
+                recursive=True,
             )
 
-        if isinstance(result, dict) and result.get("status") == "error":
-            # Specific error reported by the agent or orchestrator
-            error_detail = result.get(
-                "error", "Unknown error during report generation."
-            )
-            # Use 400 for client errors (like unknown client), 500 for internal agent errors?
-            # Let's start with 500 for simplicity.
-            raise HTTPException(
-                status_code=500,
-                detail=f"Report generation failed: {error_detail}",
+            for obj in objects:
+                object_name = obj.object_name
+                local_file_path = client_data_dir / str(obj.object_name)
+
+                # Download file from MinIO
+                settings.S3_CLIENT.fget_object(
+                    bucket_name=settings.S3_BUCKET,
+                    object_name=str(object_name),
+                    file_path=str(local_file_path),
+                )
+
+            result = generate_report_for_client(
+                client_name=request.client,
+                data_path=client_data_dir / f"submission_{request.client.lower()}",
+                investigation_points=request.investigation_points,
             )
 
-        # Check if the result looks like a valid success response structure
-        if (
-            isinstance(result, dict)
-            and "report_markdown" in result
-            and "status" in result
-        ):
-            # Construct the response model - Pydantic will validate
-            return ReportResponse(**result)
-        else:
-            # Should not happen if agents return the correct structure, but handle defensively
-            print(f"Warning: Orchestrator returned unexpected result format: {result}")
-            raise HTTPException(
-                status_code=500,
-                detail="Internal server error: Unexpected response format from report generator.",
-            )
+            return result
 
-    except HTTPException as http_exc:
-        # Re-raise HTTPException to let FastAPI handle it
-        raise http_exc
-    except Exception as e:
-        # Catch any other unexpected errors during the process
-        print(f"ERROR generating report: {e}")  # Log the full error server-side
-        raise HTTPException(
-            status_code=500,
-            detail=f"Internal server error during report generation: {e}",
-        )
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Error Processing report: {e}")
