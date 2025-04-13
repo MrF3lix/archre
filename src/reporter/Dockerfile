@@ -4,21 +4,30 @@
 FROM python:3.12-alpine AS builder
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
+# install build tools and rust
+RUN apk add --no-cache \
+  build-base \
+  cargo \
+  rustup \
+  && rustup-init -y \
+  && source $HOME/.cargo/env \
+  && rustup default stable
+
 # change the working directory to `app` directory
 WORKDIR /app
 
 # install dependencies
 RUN --mount=type=cache,target=/root/.cache/uv \
-    --mount=type=bind,source=uv.lock,target=uv.lock \
-    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    uv sync --frozen --no-install-project --no-editable
+  --mount=type=bind,source=uv.lock,target=uv.lock \
+  --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+  uv sync --frozen --no-install-project --no-editable
 
 # copy project into builder image
 ADD . /app
 
 # sync project
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-editable
+  uv sync --frozen --no-editable
 
 # --------------------------------------------------------------------------------------
 # api runner container

@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from reporter.api.v1.endpoints import contract_diff, health
+from reporter.api.v1.endpoints import contract_diff, health, report
 from reporter.core.config import settings
 
 
@@ -26,6 +26,7 @@ def create_app() -> FastAPI:
     # routers
     app.include_router(health.router, prefix="/api/v1")
     app.include_router(contract_diff.router, prefix="/api/v1")
+    app.include_router(report.router, prefix="/api/v1")
 
     return app
 
